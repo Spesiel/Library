@@ -1,11 +1,7 @@
-﻿using Library.Resources;
-using Microsoft.Isam.Esent.Collections.Generic;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 
 namespace Library.Cache
 {
@@ -13,23 +9,22 @@ namespace Library.Cache
     /// Library holding the thumbnails.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public static class Thumbnails
+    public class Thumbnails : Cache<string, string>
     {
-        private static PersistentDictionary<string, string> _Library = new PersistentDictionary<string, string>(path);
-
-        //FIXME Fix path
-        private static string path = Constants.CachePath + "Thumbnails";
-
-        private static IList<string> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
-
         internal static event LibraryEventHandler ObjectAdded;
+
+        internal static event LibraryEventHandler ObjectRemoved;
+
+        public Thumbnails() : base(nameof(Thumbnails))
+        {
+        }
 
         /// <summary>
         /// Adds a new entry in the library
         /// </summary>
         /// <param name="file">The file we save the thumbnail of</param>
         /// <param name="image">The thumbnail itself</param>
-        public static void Add(string file, Image image)
+        public void Add(string file, Image image)
         {
             string thumb;
             using (MemoryStream ms = new MemoryStream())
@@ -45,12 +40,12 @@ namespace Library.Cache
             // Add/Put in the Library, fires an event signaling the change
             if (Keys.Contains(file))
             {
-                _Library[file] = thumb;
+                Library[file] = thumb;
                 ObjectAdded(new LibraryEventArgs(file, false));
             }
             else
             {
-                _Library.Add(file, thumb);
+                Library.Add(file, thumb);
                 ObjectAdded(new LibraryEventArgs(file, true));
             }
         }
@@ -60,29 +55,18 @@ namespace Library.Cache
         /// </summary>
         /// <param name="file">The file for which we retrieve the thumbnail</param>
         /// <returns>The thumbnail</returns>
-        public static Image Get(string file)
+        public Image Get(string file)
         {
-            using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(_Library[file])))
+            using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(Library[file])))
             {
                 return Image.FromStream(ms);
             }
         }
 
-        #region Flush / Clear
-
-        internal static void Clear()
+        public void Remove(string file)
         {
-            Flush();
-            _Library.Dispose();
-            PersistentDictionaryFile.DeleteFiles(path);
-            _Library = new PersistentDictionary<string, string>(path);
+            Library.Remove(file);
+            ObjectRemoved(new LibraryEventArgs(file));
         }
-
-        internal static void Flush()
-        {
-            _Library.Flush();
-        }
-
-        #endregion Flush / Clear
     }
 }

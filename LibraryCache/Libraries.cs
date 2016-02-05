@@ -2,25 +2,30 @@
 {
     public static class Libraries
     {
+        private static Index _Index = new Index();
+        private static Thumbnails _Thumbnails = new Thumbnails();
+        public static Index Index { get { return _Index; } }
+        public static Thumbnails Thumbnails { get { return _Thumbnails; } }
+
         public static void Initialization()
         {
-            Index.Register();
+            _Index.Register();
         }
 
         #region Flush / Clear
 
         public static void Clear()
         {
-            Index.Clear();
+            _Index.Clear();
 
-            Thumbnails.Clear();
+            _Thumbnails.Clear();
         }
 
         public static void Flush()
         {
-            Index.Flush();
+            _Index.Flush();
 
-            Thumbnails.Flush();
+            _Thumbnails.Flush();
         }
 
         #endregion Flush / Clear

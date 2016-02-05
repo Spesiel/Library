@@ -1,44 +1,31 @@
-﻿using Library.Resources;
-using Microsoft.Isam.Esent.Collections.Generic;
-using System;
+﻿using System;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Library.Cache
 {
-    internal static class Index
+    public class Index : Cache<Guid, string>
     {
-        private static PersistentDictionary<Guid, string> _Library = new PersistentDictionary<Guid, string>(path);
+        public Index() : base(nameof(Index))
+        {
+        }
 
-        //FIXME Fix path
-        private static string path = Constants.CachePath + "Index";
-
-        internal static void Register()
+        internal void Register()
         {
             Thumbnails.ObjectAdded += (args) =>
             {
                 if (args.IsNew)
                 {
-                    _Library.Add(Guid.NewGuid(), args.File);
+                    Library.Add(Guid.NewGuid(), args.File);
                 }
                 Debug.WriteLine("CACHE.INDEX: Trigger ObjectAdded was fired for file " + args.File);
             };
+
+            Thumbnails.ObjectRemoved += (args) =>
+            {
+                Library.Where(l => l.Value.Equals(args.File)).AsParallel().ForAll(o => Library.Remove(o.Key));
+                Debug.WriteLine("CACHE.INDEX: Trigger ObjectRemoved was fired for file " + args.File);
+            };
         }
-
-        #region Flush / Clear
-
-        internal static void Clear()
-        {
-            Flush();
-            _Library.Dispose();
-            PersistentDictionaryFile.DeleteFiles(path);
-            _Library = new PersistentDictionary<Guid, string>(path);
-        }
-
-        internal static void Flush()
-        {
-            _Library.Flush();
-        }
-
-        #endregion Flush / Clear
     }
 }
