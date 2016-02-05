@@ -5,10 +5,12 @@ using System.Diagnostics;
 
 namespace Library.Cache
 {
-    public static class Index
+    internal static class Index
     {
+        private static PersistentDictionary<Guid, string> _Library = new PersistentDictionary<Guid, string>(path);
+
         //FIXME Fix path
-        private static PersistentDictionary<Guid, string> _Library = new PersistentDictionary<Guid, string>(Constants.CachePath + "Index");
+        private static string path = Constants.CachePath + "Index";
 
         internal static void Register()
         {
@@ -21,5 +23,22 @@ namespace Library.Cache
                 Debug.WriteLine("CACHE.INDEX: Trigger ObjectAdded was fired for file " + args.File);
             };
         }
+
+        #region Flush / Clear
+
+        internal static void Clear()
+        {
+            Flush();
+            _Library.Dispose();
+            PersistentDictionaryFile.DeleteFiles(path);
+            _Library = new PersistentDictionary<Guid, string>(path);
+        }
+
+        internal static void Flush()
+        {
+            _Library.Flush();
+        }
+
+        #endregion Flush / Clear
     }
 }

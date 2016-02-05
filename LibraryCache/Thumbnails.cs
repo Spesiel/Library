@@ -15,8 +15,10 @@ namespace Library.Cache
     /// </summary>
     public static class Thumbnails
     {
+        private static PersistentDictionary<string, string> _Library = new PersistentDictionary<string, string>(path);
+
         //FIXME Fix path
-        private static PersistentDictionary<string, string> _Library = new PersistentDictionary<string, string>(Constants.CachePath + "Thumbnails");
+        private static string path = Constants.CachePath + "Thumbnails";
 
         private static IList<string> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
 
@@ -65,5 +67,22 @@ namespace Library.Cache
                 return Image.FromStream(ms);
             }
         }
+
+        #region Flush / Clear
+
+        internal static void Clear()
+        {
+            Flush();
+            _Library.Dispose();
+            PersistentDictionaryFile.DeleteFiles(path);
+            _Library = new PersistentDictionary<string, string>(path);
+        }
+
+        internal static void Flush()
+        {
+            _Library.Flush();
+        }
+
+        #endregion Flush / Clear
     }
 }
