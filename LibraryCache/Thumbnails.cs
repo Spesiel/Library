@@ -9,15 +9,25 @@ namespace Library.Cache
     /// Library holding the thumbnails.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public class Thumbnails : Cache<string, string>
+    internal class Thumbnails : Cache<string, string>
     {
-        internal static event LibraryEventHandler ObjectAdded;
+        #region Delegates + Events
 
-        internal static event LibraryEventHandler ObjectRemoved;
+        internal static event AsyncLibraryEventHandler ObjectAdded;
+
+        internal static event AsyncLibraryEventHandler ObjectRemoved;
+
+        #endregion Delegates + Events
+
+        #region Constructors
 
         public Thumbnails() : base(nameof(Thumbnails))
         {
         }
+
+        #endregion Constructors
+
+        #region Methods
 
         /// <summary>
         /// Adds a new entry in the library
@@ -41,12 +51,12 @@ namespace Library.Cache
             if (Keys.Contains(file))
             {
                 Library[file] = thumb;
-                ObjectAdded(new LibraryEventArgs(file, false));
+                ObjectAdded(new LibraryEventAsyncArgs(file, false));
             }
             else
             {
                 Library.Add(file, thumb);
-                ObjectAdded(new LibraryEventArgs(file, true));
+                ObjectAdded(new LibraryEventAsyncArgs(file, true));
             }
         }
 
@@ -55,7 +65,7 @@ namespace Library.Cache
         /// </summary>
         /// <param name="file">The file for which we retrieve the thumbnail</param>
         /// <returns>The thumbnail</returns>
-        public Image Get(string file)
+        public Image GetThumbnail(string file)
         {
             using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(Library[file])))
             {
@@ -63,10 +73,12 @@ namespace Library.Cache
             }
         }
 
-        public void Remove(string file)
+        public override void Remove(string file)
         {
             Library.Remove(file);
-            ObjectRemoved(new LibraryEventArgs(file));
+            ObjectRemoved(new LibraryEventAsyncArgs(file));
         }
+
+        #endregion Methods
     }
 }

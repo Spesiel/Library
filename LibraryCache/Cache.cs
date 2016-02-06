@@ -6,11 +6,36 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    public class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
+    internal class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
     {
-        private PersistentDictionary<TKey, TValue> _Library;
+        #region Fields + Properties
+
         protected IList<TKey> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
         protected PersistentDictionary<TKey, TValue> Library { get { return _Library; } }
+        private PersistentDictionary<TKey, TValue> _Library;
+
+        #endregion Fields + Properties
+
+        #region Methods
+
+        public virtual void Add(TKey key, TValue value)
+        {
+            Library.Add(key, value);
+        }
+
+        public virtual TValue Get(TKey key)
+        {
+            return Library[key];
+        }
+
+        public virtual void Remove(TKey key)
+        {
+            Library.Remove(key);
+        }
+
+        #endregion Methods
+
+        #region Constructors
 
         public Cache(string path)
         {
@@ -20,6 +45,8 @@ namespace Library.Cache
         private Cache()
         {
         }
+
+        #endregion Constructors
 
         #region Flush / Clear
 
@@ -56,11 +83,10 @@ namespace Library.Cache
             {
                 if (disposing)
                 {
-                    // TODO: dispose managed state (managed objects).
+                    Flush();
                 }
 
-                // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
-                // TODO: set large fields to null.
+                _Library = null;
 
                 disposedValue = true;
             }

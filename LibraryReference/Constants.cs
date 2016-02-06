@@ -8,6 +8,8 @@ namespace Library.Resources
     /// </summary>
     public static class Constants
     {
+        #region Fields + Properties
+
         /// <summary>
         /// Path to the folder containing the Cache
         /// </summary>
@@ -23,5 +25,7 @@ namespace Library.Resources
         /// </summary>
         //FIXME Change the base folder path
         private static readonly string BasePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Path.DirectorySeparatorChar;
+
+        #endregion Fields + Properties
     }
 }
