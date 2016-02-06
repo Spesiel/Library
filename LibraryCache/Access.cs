@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Resources;
+using System;
 using System.Diagnostics;
 using System.Linq;
 
@@ -28,7 +29,7 @@ namespace Library.Cache
             Items.ItemAdded += (args) =>
             {
                 Guid guid = Guid.NewGuid();
-                Index_GuidFile.Add(guid, args.File);
+                Index_GuidFile.Add(guid, args.File, CacheObjects.Item);
 
                 Debug.WriteLine("Cache.ObjectAdded: Trigger was fired for file " + args.File);
             };
@@ -38,29 +39,44 @@ namespace Library.Cache
                 // Removes the item from all libraries
                 Index_GuidFile.GetGuids(args.File).AsParallel().ForAll(i =>
                 {
-                    Timings.Remove(i);
-                    Tags.Remove(i);
+                    switch (i.Item2)
+                    {
+                        case CacheObjects.Timing:
+                            Timings.Remove(i.Item1);
+                            break;
 
-                    Index_GuidFile.Remove(i);
+                        case CacheObjects.Tag:
+                            Tags.Remove(i.Item1);
+                            break;
+
+                        case CacheObjects.Person:
+                            Persons.Remove(i.Item1);
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    Index_GuidFile.Remove(i.Item1);
                 });
                 Debug.WriteLine("Cache.ObjectRemoved: Trigger was fired for file " + args.File);
             };
 
             Timings.TimingAdded += (args) =>
             {
-                Index_GuidFile.Add(args.Guid, args.File);
+                Index_GuidFile.Add(args.Guid, args.File, CacheObjects.Timing);
                 Debug.WriteLine("Cache.TimingAdded: Trigger was fired for file " + args.File);
             };
 
             Tags.TagAdded += (args) =>
             {
-                Index_GuidFile.Add(args.Guid, args.File);
+                Index_GuidFile.Add(args.Guid, args.File, CacheObjects.Tag);
                 Debug.WriteLine("Cache.TagAdded: Trigger was fired for file " + args.File);
             };
 
             Persons.PersonAdded += (args) =>
             {
-                Index_GuidFile.Add(args.Guid, args.File);
+                Index_GuidFile.Add(args.Guid, args.File, CacheObjects.Person);
                 Debug.WriteLine("Cache.PersonAdded: Trigger was fired for file " + args.File);
             };
         }

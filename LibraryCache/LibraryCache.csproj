@@ -100,6 +100,7 @@
     <Compile Include="%28AsyncEvents%29.cs" />
     <Compile Include="Access.cs" />
     <Compile Include="Objects\Exif.cs" />
+    <Compile Include="Objects\Index.cs" />
     <Compile Include="Objects\Item.cs" />
     <Compile Include="Objects\Person.cs" />
     <Compile Include="Objects\Timing.cs" />
