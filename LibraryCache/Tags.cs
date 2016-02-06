@@ -1,5 +1,4 @@
-﻿using Library.Cache.Objects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,24 +8,24 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public class Timings : Cache<Guid, Timing>
+    public class Tags : Cache<Guid, string>
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler TimingAdded;
+        internal static event AsyncLibraryEventHandler TagAdded;
 
         #endregion Delegates + Events
 
         #region Methods
 
-        public void Add(string file, Timing timing)
+        public void Add(string file, string tag)
         {
             Guid guid = Guid.NewGuid();
-            base.Add(guid, timing);
-            TimingAdded(new LibraryEventAsyncArgs(file, guid));
+            base.Add(guid, tag);
+            TagAdded(new LibraryEventAsyncArgs(file, guid));
         }
 
-        public IEnumerable<Timing> Get(string file)
+        public IEnumerable<string> Get(string file)
         {
             return Library.Where(l => Access.Index_GuidFile.Get(file).Any().Equals(l.Key)).Select(i => i.Value);
         }
@@ -35,7 +34,7 @@ namespace Library.Cache
 
         #region Constructors
 
-        public Timings() : base(nameof(Timings))
+        public Tags() : base(nameof(Tags))
         {
         }
 

@@ -11,10 +11,12 @@ namespace Library.Cache
         internal static Index_FileGuid Index_FileGuid { get { return _Index_FileGuid; } }
         internal static Index_GuidFile Index_GuidFile { get { return _Index_GuidFile; } }
         internal static Items Items { get { return _Items; } }
+        internal static Tags Tags { get { return _Tags; } }
         internal static Timings Timings { get { return _Timings; } }
         private static Index_FileGuid _Index_FileGuid = new Index_FileGuid();
         private static Index_GuidFile _Index_GuidFile = new Index_GuidFile();
         private static Items _Items = new Items();
+        private static Tags _Tags = new Tags();
         private static Timings _Timings = new Timings();
 
         #endregion Fields + Properties
@@ -39,7 +41,11 @@ namespace Library.Cache
                 Index_FileGuid.Remove(args.File);
 
                 // Removes the item from the other libraries
-                Index_GuidFile.Get(args.File).AsParallel().ForAll(i => { Timings.Remove(i); });
+                Index_GuidFile.Get(args.File).AsParallel().ForAll(i =>
+                {
+                    Timings.Remove(i);
+                    Tags.Remove(i);
+                });
                 Debug.WriteLine("Cache.ObjectRemoved: Trigger was fired for file " + args.File);
             };
 
@@ -47,6 +53,12 @@ namespace Library.Cache
             {
                 Index_GuidFile.Add(args.Guid, args.File);
                 Debug.WriteLine("Cache.TimingAdded: Trigger was fired for file " + args.File);
+            };
+
+            Tags.TagAdded += (args) =>
+            {
+                Index_GuidFile.Add(args.Guid, args.File);
+                Debug.WriteLine("Cache.TagAdded: Trigger was fired for file " + args.File);
             };
         }
 
@@ -61,6 +73,7 @@ namespace Library.Cache
 
             Items.Clear();
             Timings.Clear();
+            Tags.Clear();
         }
 
         public static void Flush()
@@ -70,6 +83,7 @@ namespace Library.Cache
 
             Items.Flush();
             Timings.Flush();
+            Tags.Flush();
         }
 
         #endregion Flush / Clear
