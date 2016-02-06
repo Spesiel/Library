@@ -98,7 +98,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Catalog.cs" />
     <Compile Include="%28AsyncEvents%29.cs" />
-    <Compile Include="Access.cs" />
+    <Compile Include="CacheManager.cs" />
     <Compile Include="Objects\Exif.cs" />
     <Compile Include="Objects\Record.cs" />
     <Compile Include="Objects\Item.cs" />

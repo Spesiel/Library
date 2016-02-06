@@ -6,7 +6,7 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public class Items : Cache<string, Item>
+    public sealed class Items : Cache<string, Item>
     {
         #region Delegates + Events
 

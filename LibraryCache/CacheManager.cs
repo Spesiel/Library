@@ -1,11 +1,10 @@
 ﻿using Library.Resources;
-using System;
 using System.Diagnostics;
 using System.Linq;
 
 namespace Library.Cache
 {
-    public static class Access
+    public static class CacheManager
     {
         #region Fields + Properties
 
@@ -26,7 +25,7 @@ namespace Library.Cache
 
         // We need those events to be initialized, and there's no way to do this
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
-        static Access()
+        static CacheManager()
         {
             Items.ItemRemoved += (args) =>
             {

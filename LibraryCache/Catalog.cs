@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    internal class Catalog : Cache<Guid, Record>
+    internal sealed class Catalog : Cache<Guid, Record>
     {
         #region Methods
 

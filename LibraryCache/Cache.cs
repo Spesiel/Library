@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    public class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
+    public abstract class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
     {
         #region Fields + Properties
 
@@ -60,7 +60,7 @@ namespace Library.Cache
 
         public IEnumerable<TValue> Get(string file)
         {
-            return Library.Where(l => Access.Catalog.GetGuids(file).Any().Equals(l.Key)).Select(i => i.Value);
+            return Library.Where(l => CacheManager.Catalog.GetGuids(file).Any().Equals(l.Key)).Select(i => i.Value);
         }
 
         internal virtual void Remove(TKey key)

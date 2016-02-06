@@ -1,7 +1,5 @@
 ﻿using Library.Cache.Objects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Library.Cache
 {
@@ -9,7 +7,7 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public class Timings : Cache<Guid, Timing>
+    public sealed class Timings : Cache<Guid, Timing>
     {
         #region Delegates + Events
 

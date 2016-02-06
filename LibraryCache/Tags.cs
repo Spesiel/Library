@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Library.Cache
 {
@@ -8,7 +6,7 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public class Tags : Cache<Guid, string>
+    public sealed class Tags : Cache<Guid, string>
     {
         #region Delegates + Events
 
