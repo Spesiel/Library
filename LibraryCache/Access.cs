@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Cache.Objects;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 
@@ -8,9 +9,11 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
+        internal static Exifs Exifs { get { return _Exifs; } }
         internal static Index_FileGuid Index_FileGuid { get { return _Index_FileGuid; } }
         internal static Index_GuidFile Index_GuidFile { get { return _Index_GuidFile; } }
         internal static Thumbnails Thumbnails { get { return _Thumbnails; } }
+        private static Exifs _Exifs = new Exifs();
         private static Index_FileGuid _Index_FileGuid = new Index_FileGuid();
         private static Index_GuidFile _Index_GuidFile = new Index_GuidFile();
         private static Thumbnails _Thumbnails = new Thumbnails();
@@ -45,22 +48,37 @@ namespace Library.Cache
 
         #region Thumbnail: Get / Add
 
-        public static void AddThumbnail(string file, Image image)
+        public static void ThumbnailAdd(string file, Image image)
         {
             Thumbnails.Add(file, image);
         }
 
-        public static Image GetThumbnail(string file)
+        public static Image ThumbnailGet(string file)
         {
             return Thumbnails.GetThumbnail(file);
         }
 
         #endregion Thumbnail: Get / Add
 
+        #region Exif: Get / Add
+
+        public static void ExifAdd(string file, Exif exif)
+        {
+            Exifs.Add(file, exif);
+        }
+
+        public static Exif ExifGet(string file)
+        {
+            return Exifs.Get(file);
+        }
+
+        #endregion Exif: Get / Add
+
         #region Remove
 
         public static void Remove(string file)
         {
+            Exifs.Remove(file);
             Thumbnails.Remove(file);
         }
 
@@ -71,6 +89,9 @@ namespace Library.Cache
         public static void Clear()
         {
             Index_GuidFile.Clear();
+            Index_FileGuid.Clear();
+
+            Exifs.Clear();
 
             Thumbnails.Clear();
         }
@@ -78,6 +99,9 @@ namespace Library.Cache
         public static void Flush()
         {
             Index_GuidFile.Flush();
+            Index_FileGuid.Flush();
+
+            Exifs.Flush();
 
             Thumbnails.Flush();
         }

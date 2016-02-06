@@ -20,7 +20,14 @@ namespace Library.Cache
 
         public virtual void Add(TKey key, TValue value)
         {
-            Library.Add(key, value);
+            if (Library.ContainsKey(key))
+            {
+                Library[key] = value;
+            }
+            else
+            {
+                Library.Add(key, value);
+            }
         }
 
         public virtual TValue Get(TKey key)

@@ -75,7 +75,7 @@ namespace Library.Cache
 
         public override void Remove(string file)
         {
-            Library.Remove(file);
+            base.Remove(file);
             ObjectRemoved(new LibraryEventAsyncArgs(file));
         }
 
