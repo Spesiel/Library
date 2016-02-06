@@ -10,10 +10,12 @@ namespace Library.Cache
 
         internal static Index_GuidFile Index_GuidFile { get { return _Index_GuidFile; } }
         internal static Items Items { get { return _Items; } }
+        internal static Persons Persons { get { return _Persons; } }
         internal static Tags Tags { get { return _Tags; } }
         internal static Timings Timings { get { return _Timings; } }
         private static Index_GuidFile _Index_GuidFile = new Index_GuidFile();
         private static Items _Items = new Items();
+        private static Persons _Persons = new Persons();
         private static Tags _Tags = new Tags();
         private static Timings _Timings = new Timings();
 
@@ -55,6 +57,12 @@ namespace Library.Cache
                 Index_GuidFile.Add(args.Guid, args.File);
                 Debug.WriteLine("Cache.TagAdded: Trigger was fired for file " + args.File);
             };
+
+            Persons.PersonAdded += (args) =>
+            {
+                Index_GuidFile.Add(args.Guid, args.File);
+                Debug.WriteLine("Cache.PersonAdded: Trigger was fired for file " + args.File);
+            };
         }
 
         #endregion Methods
@@ -68,6 +76,7 @@ namespace Library.Cache
             Items.Clear();
             Timings.Clear();
             Tags.Clear();
+            Persons.Clear();
         }
 
         public static void Flush()
@@ -77,6 +86,7 @@ namespace Library.Cache
             Items.Flush();
             Timings.Flush();
             Tags.Flush();
+            Persons.Flush();
         }
 
         #endregion Flush / Clear
