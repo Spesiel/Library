@@ -1,6 +1,6 @@
 ﻿namespace Library.Resources
 {
-    public enum CacheObjects
+    public enum Kind
     {
         Item,
         Person,

@@ -10,19 +10,11 @@ namespace Library.Cache
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler ItemAdded;
-
         internal static event AsyncLibraryEventHandler ItemRemoved;
 
         #endregion Delegates + Events
 
         #region Methods
-
-        public override void Add(string key, Item value)
-        {
-            base.Add(key, value);
-            ItemAdded(new LibraryEventAsyncArgs(key));
-        }
 
         internal override void Remove(string file)
         {

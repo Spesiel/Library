@@ -9,12 +9,12 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
-        internal static Index_GuidFile Index_GuidFile { get { return _Index_GuidFile; } }
-        internal static Items Items { get { return _Items; } }
-        internal static Persons Persons { get { return _Persons; } }
-        internal static Tags Tags { get { return _Tags; } }
-        internal static Timings Timings { get { return _Timings; } }
-        private static Index_GuidFile _Index_GuidFile = new Index_GuidFile();
+        public static Items Items { get { return _Items; } }
+        public static Persons Persons { get { return _Persons; } }
+        public static Tags Tags { get { return _Tags; } }
+        public static Timings Timings { get { return _Timings; } }
+        internal static Catalog Catalog { get { return _Catalog; } }
+        private static Catalog _Catalog = new Catalog();
         private static Items _Items = new Items();
         private static Persons _Persons = new Persons();
         private static Tags _Tags = new Tags();
@@ -22,72 +22,64 @@ namespace Library.Cache
 
         #endregion Fields + Properties
 
-        #region Methods
+        #region Constructors
 
-        public static void Initialization()
+        // We need those events to be initialized, and there's no way to do this
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
+        static Access()
         {
-            Items.ItemAdded += (args) =>
-            {
-                Guid guid = Guid.NewGuid();
-                Index_GuidFile.Add(guid, args.File, CacheObjects.Item);
-
-                Debug.WriteLine("Cache.ObjectAdded: Trigger was fired for file " + args.File);
-            };
-
             Items.ItemRemoved += (args) =>
             {
                 // Removes the item from all libraries
-                Index_GuidFile.GetGuids(args.File).AsParallel().ForAll(i =>
+                Catalog.GetGuids(args.File).AsParallel().ForAll(i =>
                 {
-                    switch (i.Item2)
+                    switch (i.Value)
                     {
-                        case CacheObjects.Timing:
-                            Timings.Remove(i.Item1);
+                        case Kind.Timing:
+                            Timings.Remove(i.Key);
                             break;
 
-                        case CacheObjects.Tag:
-                            Tags.Remove(i.Item1);
+                        case Kind.Tag:
+                            Tags.Remove(i.Key);
                             break;
 
-                        case CacheObjects.Person:
-                            Persons.Remove(i.Item1);
+                        case Kind.Person:
+                            Persons.Remove(i.Key);
                             break;
 
                         default:
                             break;
                     }
-
-                    Index_GuidFile.Remove(i.Item1);
                 });
-                Debug.WriteLine("Cache.ObjectRemoved: Trigger was fired for file " + args.File);
+                Debug.WriteLine("Cache.ItemRemoved: Trigger was fired for file " + args.File);
             };
 
             Timings.TimingAdded += (args) =>
             {
-                Index_GuidFile.Add(args.Guid, args.File, CacheObjects.Timing);
+                Catalog.Add(args.Guid, args.File, Kind.Timing);
                 Debug.WriteLine("Cache.TimingAdded: Trigger was fired for file " + args.File);
             };
 
             Tags.TagAdded += (args) =>
             {
-                Index_GuidFile.Add(args.Guid, args.File, CacheObjects.Tag);
+                Catalog.Add(args.Guid, args.File, Kind.Tag);
                 Debug.WriteLine("Cache.TagAdded: Trigger was fired for file " + args.File);
             };
 
             Persons.PersonAdded += (args) =>
             {
-                Index_GuidFile.Add(args.Guid, args.File, CacheObjects.Person);
+                Catalog.Add(args.Guid, args.File, Kind.Person);
                 Debug.WriteLine("Cache.PersonAdded: Trigger was fired for file " + args.File);
             };
         }
 
-        #endregion Methods
+        #endregion Constructors
 
         #region Flush / Clear
 
         public static void Clear()
         {
-            Index_GuidFile.Clear();
+            Catalog.Clear();
 
             Items.Clear();
             Timings.Clear();
@@ -97,7 +89,7 @@ namespace Library.Cache
 
         public static void Flush()
         {
-            Index_GuidFile.Flush();
+            Catalog.Flush();
 
             Items.Flush();
             Timings.Flush();

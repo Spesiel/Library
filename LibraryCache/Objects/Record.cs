@@ -4,38 +4,38 @@ using System;
 namespace Library.Cache.Objects
 {
     [Serializable]
-    public struct Index
+    public struct Record
     {
         #region Fields + Properties
 
         public string File { get; set; }
-        public CacheObjects ObjectType { get; set; }
+        public Kind Kind { get; set; }
 
         #endregion Fields + Properties
 
         #region Methods
 
-        public static bool operator !=(Index item1, Index item2)
+        public static bool operator !=(Record item1, Record item2)
         {
             return !item1.Equals(item2);
         }
 
-        public static bool operator ==(Index item1, Index item2)
+        public static bool operator ==(Record item1, Record item2)
         {
             return item1.Equals(item2);
         }
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Index))
+            if (!(obj is Record))
                 return false;
 
-            return Equals((Index)obj);
+            return Equals((Record)obj);
         }
 
-        public bool Equals(Index other)
+        public bool Equals(Record other)
         {
-            if (File != other.File || ObjectType != other.ObjectType)
+            if (File != other.File || Kind != other.Kind)
                 return false;
 
             return true;
@@ -43,7 +43,7 @@ namespace Library.Cache.Objects
 
         public override int GetHashCode()
         {
-            return File.GetHashCode() ^ ObjectType.GetHashCode();
+            return File.GetHashCode() ^ Kind.GetHashCode();
         }
 
         #endregion Methods

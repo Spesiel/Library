@@ -46,7 +46,7 @@ namespace Library.Cache
 
         #region Methods
 
-        public virtual void Add(TKey key, TValue value)
+        public void Add(TKey key, TValue value)
         {
             if (Library.ContainsKey(key))
             {
@@ -60,7 +60,7 @@ namespace Library.Cache
 
         public IEnumerable<TValue> Get(string file)
         {
-            return Library.Where(l => Access.Index_GuidFile.GetGuids(file).Any().Equals(l.Key)).Select(i => i.Value);
+            return Library.Where(l => Access.Catalog.GetGuids(file).Any().Equals(l.Key)).Select(i => i.Value);
         }
 
         internal virtual void Remove(TKey key)
