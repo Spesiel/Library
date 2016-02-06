@@ -34,7 +34,7 @@ namespace Library.Cache
             Items.ItemRemoved += (args) =>
             {
                 // Removes the item from all libraries
-                Index_GuidFile.Get(args.File).AsParallel().ForAll(i =>
+                Index_GuidFile.GetGuids(args.File).AsParallel().ForAll(i =>
                 {
                     Timings.Remove(i);
                     Tags.Remove(i);

@@ -8,7 +8,7 @@ namespace Library.Cache
     {
         #region Methods
 
-        public IEnumerable<Guid> Get(string file)
+        public IEnumerable<Guid> GetGuids(string file)
         {
             return Library.Where(l => l.Value.Equals(file)).Select(o => o.Key);
         }

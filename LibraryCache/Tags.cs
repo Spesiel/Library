@@ -25,11 +25,6 @@ namespace Library.Cache
             TagAdded(new LibraryEventAsyncArgs(file, guid));
         }
 
-        public IEnumerable<string> Get(string file)
-        {
-            return Library.Where(l => Access.Index_GuidFile.Get(file).Any().Equals(l.Key)).Select(i => i.Value);
-        }
-
         #endregion Methods
 
         #region Constructors

@@ -16,6 +16,34 @@ namespace Library.Cache
 
         #endregion Fields + Properties
 
+        #region Indexers
+
+        public TValue this[int index]
+        {
+            get
+            {
+                return Library[Keys[index]];
+            }
+            set
+            {
+                Library[Keys[index]] = value;
+            }
+        }
+
+        public TValue this[TKey key]
+        {
+            get
+            {
+                return Library[key];
+            }
+            set
+            {
+                Library[key] = value;
+            }
+        }
+
+        #endregion Indexers
+
         #region Methods
 
         public virtual void Add(TKey key, TValue value)
@@ -30,9 +58,9 @@ namespace Library.Cache
             }
         }
 
-        public TValue Get(TKey key)
+        public IEnumerable<TValue> Get(string file)
         {
-            return Library[key];
+            return Library.Where(l => Access.Index_GuidFile.GetGuids(file).Any().Equals(l.Key)).Select(i => i.Value);
         }
 
         internal virtual void Remove(TKey key)
