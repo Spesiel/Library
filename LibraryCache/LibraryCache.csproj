@@ -96,7 +96,6 @@
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Index_FileGuid.cs" />
     <Compile Include="Index_GuidFile.cs" />
     <Compile Include="%28AsyncEvents%29.cs" />
     <Compile Include="Access.cs" />
