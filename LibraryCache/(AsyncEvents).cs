@@ -9,8 +9,7 @@ namespace Library.Cache
         #region Fields + Properties
 
         public string File { get; }
-
-        public bool IsNew { get; }
+        public Guid Guid { get; }
 
         #endregion Fields + Properties
 
@@ -23,10 +22,10 @@ namespace Library.Cache
         }
 
         // Is in fact called through async call when fired
-        public LibraryEventAsyncArgs(string file, bool isNew)
+        public LibraryEventAsyncArgs(string file, Guid guid)
         {
             File = file;
-            IsNew = isNew;
+            Guid = guid;
         }
 
         #endregion Constructors

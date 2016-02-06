@@ -29,13 +29,14 @@ namespace Library.Cache.Objects
             }
             set
             {
-                if (value != null)
+                if (value == null)
                 {
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        value.Save(ms, ImageFormat.Jpeg);
-                        _Thumbnail = Convert.ToBase64String(ms.ToArray());
-                    }
+                    throw new ArgumentNullException(nameof(value));
+                }
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    value.Save(ms, ImageFormat.Png);
+                    _Thumbnail = Convert.ToBase64String(ms.ToArray());
                 }
             }
         }

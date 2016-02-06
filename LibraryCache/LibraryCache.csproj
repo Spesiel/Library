@@ -94,7 +94,7 @@
   <ItemGroup>
     <Compile Include="Cache.cs" />
     <Compile Include="CLSCompliant.cs" />
-    <Compile Include="Exifs.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Index_FileGuid.cs" />
     <Compile Include="Index_GuidFile.cs" />
@@ -105,7 +105,7 @@
     <Compile Include="Objects\Person.cs" />
     <Compile Include="Objects\Timing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Thumbnails.cs" />
+    <Compile Include="Timings.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />

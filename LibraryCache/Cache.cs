@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    internal class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
+    public class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
     {
         #region Fields + Properties
 
@@ -30,12 +30,12 @@ namespace Library.Cache
             }
         }
 
-        public virtual TValue Get(TKey key)
+        public TValue Get(TKey key)
         {
             return Library[key];
         }
 
-        public virtual void Remove(TKey key)
+        internal virtual void Remove(TKey key)
         {
             Library.Remove(key);
         }
@@ -44,7 +44,7 @@ namespace Library.Cache
 
         #region Constructors
 
-        public Cache(string path)
+        internal Cache(string path)
         {
             _Library = new PersistentDictionary<TKey, TValue>(Constants.CachePath + path);
         }
