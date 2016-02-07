@@ -31,17 +31,17 @@ namespace Library.Works
 
         #region GetAll
 
-        public static List<Person> GetAllPersons(string current)
+        public static IList<Person> GetAllPersons(string current)
         {
             return GetAll(current, Kind.Person).ConvertAll(i => (Person)i);
         }
 
-        public static List<string> GetAllTags(string current)
+        public static IList<string> GetAllTags(string current)
         {
             return GetAll(current, Kind.Tag).ConvertAll(i => i.ToString());
         }
 
-        public static List<Timing> GetAllTimings(string current)
+        public static IList<Timing> GetAllTimings(string current)
         {
             return GetAll(current, Kind.Timing).ConvertAll(i => (Timing)i);
         }

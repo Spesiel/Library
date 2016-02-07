@@ -139,7 +139,9 @@ namespace Library.Cache
 
         public static IEnumerable<string> SearchItems(string location)
         {
-            return Items.Keys.Where(k => (k as string).StartsWith(location)).OrderBy(o => o);
+            return Items.Keys.Where(k => (k as string).
+                StartsWith(location, StringComparison.OrdinalIgnoreCase)).
+                OrderBy(o => o);
         }
 
         #endregion Searches
