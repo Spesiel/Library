@@ -11,8 +11,8 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
-        protected IList<TKey> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
-        protected PersistentDictionary<TKey, TValue> Library { get { return _Library; } }
+        public IList<TKey> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
+        public PersistentDictionary<TKey, TValue> Library { get { return _Library; } }
         private PersistentDictionary<TKey, TValue> _Library;
 
         #endregion Fields + Properties

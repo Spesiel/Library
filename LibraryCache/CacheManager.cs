@@ -80,6 +80,39 @@ namespace Library.Cache
 
         #region Methods
 
+        public static Tuple<int, int> IndexOf(string location, object key, Kind kind)
+        {
+            int index = -1;
+            if (!Kind.Item.Equals(kind)) index = Search(location, kind).ToList().IndexOf(key as IArtifact);
+
+            int count = -1;
+
+            switch (kind)
+            {
+                case Kind.Item:
+                    index = Items.Keys.Where(k => (k as string).StartsWith(location)).OrderBy(o => o).ToList().
+                        IndexOf(key as string);
+                    count = Items.Keys.Count;
+                    break;
+
+                case Kind.Person:
+                    count = Persons.Keys.Count;
+                    break;
+
+                case Kind.Timing:
+                    count = Timings.Keys.Count;
+                    break;
+
+                case Kind.Tag:
+                    count = Tags.Keys.Count;
+                    break;
+
+                default:
+                    break;
+            }
+            return Tuple.Create(index, count);
+        }
+
         public static IEnumerable<IArtifact> Search(string location, Kind kind)
         {
             IEnumerable<IArtifact> ans = null;
