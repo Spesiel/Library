@@ -2,7 +2,7 @@
 
 namespace Library.Cache
 {
-    internal delegate void AsyncLibraryEventHandler(CacheEventAsyncArgs arg);
+    internal delegate void AsyncCacheEventHandler(CacheEventAsyncArgs arg);
 
     internal class CacheEventAsyncArgs : EventArgs
     {
