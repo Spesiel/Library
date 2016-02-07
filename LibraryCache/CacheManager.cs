@@ -102,6 +102,11 @@ namespace Library.Cache
             return Tuple.Create(index, count);
         }
 
+        public static void Remove(string file)
+        {
+            Items.Remove(file);
+        }
+
         #endregion Methods
 
         #region Searches
