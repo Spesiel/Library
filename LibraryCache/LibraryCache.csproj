@@ -92,7 +92,7 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache.cs" />
+    <Compile Include="Hoard.cs" />
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -100,6 +100,7 @@
     <Compile Include="%28AsyncEvents%29.cs" />
     <Compile Include="CacheManager.cs" />
     <Compile Include="Objects\Exif.cs" />
+    <Compile Include="Objects\IArtifact.cs" />
     <Compile Include="Objects\Record.cs" />
     <Compile Include="Objects\Item.cs" />
     <Compile Include="Objects\Person.cs" />

@@ -6,7 +6,7 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public sealed class Tags : Cache<Guid, string>
+    public sealed class Tags : Hoard<Guid, string>
     {
         #region Delegates + Events
 

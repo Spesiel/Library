@@ -1,4 +1,6 @@
 ﻿using Library.Cache.Objects;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Library.Cache
 {
@@ -6,7 +8,7 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public sealed class Items : Cache<string, Item>
+    public sealed class Items : Hoard<string, Item>
     {
         #region Delegates + Events
 
@@ -20,6 +22,11 @@ namespace Library.Cache
         {
             base.Remove(file);
             ItemRemoved(new LibraryEventAsyncArgs(file));
+        }
+
+        internal IEnumerable<string> Search(string location)
+        {
+            return Library.Keys.Where(i => i.StartsWith(location)).OrderBy(o => o);
         }
 
         #endregion Methods

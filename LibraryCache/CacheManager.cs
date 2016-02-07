@@ -1,4 +1,9 @@
-﻿using Library.Resources;
+﻿using Library.Cache;
+using Library.Cache.Objects;
+using Library.Resources;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
@@ -73,6 +78,36 @@ namespace Library.Cache
         }
 
         #endregion Constructors
+
+        #region Methods
+
+        public static IEnumerable<IArtifact> Search(string location, Kind kind)
+        {
+            IEnumerable<IArtifact> ans = null;
+            IEnumerable<Guid> guids = Catalog.Get(Items.Search(location), kind);
+
+            switch (kind)
+            {
+                case Kind.Person:
+                    ans = Persons.Get(guids);
+                    break;
+
+                case Kind.Timing:
+                    ans = Timings.Get(guids);
+                    break;
+
+                case Kind.Tag:
+                    ans = Tags.Get(guids);
+                    break;
+
+                default:
+                    break;
+            }
+
+            return ans;
+        }
+
+        #endregion Methods
 
         #region Flush / Clear
 

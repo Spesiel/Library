@@ -1,4 +1,5 @@
-﻿using Library.Resources;
+﻿using Library.Cache.Objects;
+using Library.Resources;
 using Microsoft.Isam.Esent.Collections.Generic;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    public abstract class Cache<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
+    public abstract class Hoard<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
     {
         #region Fields + Properties
 
@@ -58,9 +59,9 @@ namespace Library.Cache
             }
         }
 
-        public IEnumerable<TValue> Get(string file)
+        public IEnumerable<IArtifact> Get(IEnumerable<TKey> keys)
         {
-            return Library.Where(l => CacheManager.Catalog.GetGuids(file).Any().Equals(l.Key)).Select(i => i.Value);
+            return Library.Where(l => l.Key.Equals(keys.Any())).Select(i => i.Value as IArtifact);
         }
 
         internal virtual void Remove(TKey key)
@@ -72,12 +73,12 @@ namespace Library.Cache
 
         #region Constructors
 
-        internal Cache(string path)
+        internal Hoard(string path)
         {
             _Library = new PersistentDictionary<TKey, TValue>(Constants.CachePath + path);
         }
 
-        private Cache()
+        private Hoard()
         {
         }
 

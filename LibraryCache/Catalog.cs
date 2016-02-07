@@ -6,13 +6,18 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    internal sealed class Catalog : Cache<Guid, Record>
+    internal sealed class Catalog : Hoard<Guid, Record>
     {
         #region Methods
 
         public void Add(Guid id, string file, Kind kind)
         {
             Library.Add(id, new Record { File = file, Kind = kind });
+        }
+
+        public IEnumerable<Guid> Get(IEnumerable<string> files, Kind kind)
+        {
+            return Library.Where(l => l.Value.File.Equals(files.Any()) && l.Value.Kind.Equals(kind)).Select(i => i.Key);
         }
 
         public Dictionary<Guid, Kind> GetGuids(string file)

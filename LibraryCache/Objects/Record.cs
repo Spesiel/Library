@@ -4,7 +4,7 @@ using System;
 namespace Library.Cache.Objects
 {
     [Serializable]
-    public struct Record
+    public struct Record : IArtifact
     {
         #region Fields + Properties
 

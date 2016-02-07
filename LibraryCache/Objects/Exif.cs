@@ -3,7 +3,7 @@
 namespace Library.Cache.Objects
 {
     [Serializable]
-    public struct Exif
+    public struct Exif : IArtifact
     {
         #region Fields + Properties
 

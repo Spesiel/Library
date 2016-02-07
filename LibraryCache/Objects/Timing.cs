@@ -3,7 +3,7 @@
 namespace Library.Cache.Objects
 {
     [Serializable]
-    public struct Timing
+    public struct Timing : IArtifact
     {
         #region Fields + Properties
 

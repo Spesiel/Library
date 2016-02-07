@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 namespace Library.Cache.Objects
 {
     [Serializable]
-    public struct Item
+    public struct Item : IArtifact
     {
         #region Fields + Properties
 
