@@ -27,7 +27,7 @@ namespace Library.Resources
         /// <summary>
         /// The base path for all the files
         /// </summary>
-        //FIXME Change the base folder path
+        //TOFIX Change the base folder path
         private static readonly string BasePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Path.DirectorySeparatorChar;
 
         #endregion Fields + Properties

@@ -15,6 +15,12 @@ namespace Library.Works
     {
         #region Methods
 
+        /// <summary>
+        /// Generate a thumbnail for a specified file
+        /// </summary>
+        /// <param name="background">The background color that item will have</param>
+        /// <param name="pathToFile">The complete path to the file to open</param>
+        /// <returns>The generated thumbnail</returns>
         public static Image GenerateThumbnail(Color background, string file)
         {
             Item item = CacheManager.Items[file];
@@ -29,12 +35,6 @@ namespace Library.Works
             return item.Thumbnail;
         }
 
-        /// <summary>
-        /// Generate a thumbnail for a specified file
-        /// </summary>
-        /// <param name="background">The background color that item will have</param>
-        /// <param name="pathToFile">The complete path to the file to open</param>
-        /// <returns>The generated thumbnail</returns>
         private static Item GenerateCacheObjectThumbnail(Color background, String pathToFile)
         {
             Item ans = new Item();
