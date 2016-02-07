@@ -1,8 +1,6 @@
-﻿using Library.Cache;
-using Library.Cache.Objects;
+﻿using Library.Cache.Objects;
 using Library.Resources;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,16 +11,16 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
-        public static Items Items { get { return _Items; } }
-        public static Persons Persons { get { return _Persons; } }
-        public static Tags Tags { get { return _Tags; } }
-        public static Timings Timings { get { return _Timings; } }
-        internal static Catalog Catalog { get { return _Catalog; } }
-        private static Catalog _Catalog = new Catalog();
-        private static Items _Items = new Items();
-        private static Persons _Persons = new Persons();
-        private static Tags _Tags = new Tags();
-        private static Timings _Timings = new Timings();
+        public static ItemHoard Items { get { return _Items; } }
+        public static PersonHoard Persons { get { return _Persons; } }
+        public static TagHoard Tags { get { return _Tags; } }
+        public static TimingHoard Timings { get { return _Timings; } }
+        internal static Catalog Index { get { return _Index; } }
+        private static Catalog _Index = new Catalog();
+        private static ItemHoard _Items = new ItemHoard();
+        private static PersonHoard _Persons = new PersonHoard();
+        private static TagHoard _Tags = new TagHoard();
+        private static TimingHoard _Timings = new TimingHoard();
 
         #endregion Fields + Properties
 
@@ -32,10 +30,10 @@ namespace Library.Cache
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
         static CacheManager()
         {
-            Items.ItemRemoved += (args) =>
+            ItemHoard.ItemRemoved += (args) =>
             {
                 // Removes the item from all libraries
-                Catalog.GetGuids(args.File).AsParallel().ForAll(i =>
+                Index.GetGuids(args.File).AsParallel().ForAll(i =>
                 {
                     switch (i.Value)
                     {
@@ -54,25 +52,26 @@ namespace Library.Cache
                         default:
                             break;
                     }
+                    Index.Remove(i.Key);
                 });
                 Debug.WriteLine("Cache.ItemRemoved: Trigger was fired for file " + args.File);
             };
 
-            Timings.TimingAdded += (args) =>
+            TimingHoard.TimingAdded += (args) =>
             {
-                Catalog.Add(args.Guid, args.File, Kind.Timing);
+                Index.Add(args.Guid, args.File, Kind.Timing);
                 Debug.WriteLine("Cache.TimingAdded: Trigger was fired for file " + args.File);
             };
 
-            Tags.TagAdded += (args) =>
+            TagHoard.TagAdded += (args) =>
             {
-                Catalog.Add(args.Guid, args.File, Kind.Tag);
+                Index.Add(args.Guid, args.File, Kind.Tag);
                 Debug.WriteLine("Cache.TagAdded: Trigger was fired for file " + args.File);
             };
 
-            Persons.PersonAdded += (args) =>
+            PersonHoard.PersonAdded += (args) =>
             {
-                Catalog.Add(args.Guid, args.File, Kind.Person);
+                Index.Add(args.Guid, args.File, Kind.Person);
                 Debug.WriteLine("Cache.PersonAdded: Trigger was fired for file " + args.File);
             };
         }
@@ -84,7 +83,7 @@ namespace Library.Cache
         public static IEnumerable<IArtifact> Search(string location, Kind kind)
         {
             IEnumerable<IArtifact> ans = null;
-            IEnumerable<Guid> guids = Catalog.Get(Items.Search(location), kind);
+            IEnumerable<Guid> guids = Index.Get(Items.Search(location), kind);
 
             switch (kind)
             {
@@ -113,7 +112,7 @@ namespace Library.Cache
 
         public static void Clear()
         {
-            Catalog.Clear();
+            Index.Clear();
 
             Items.Clear();
             Timings.Clear();
@@ -123,7 +122,7 @@ namespace Library.Cache
 
         public static void Flush()
         {
-            Catalog.Flush();
+            Index.Flush();
 
             Items.Flush();
             Timings.Flush();

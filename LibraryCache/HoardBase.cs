@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Library.Cache
 {
-    public abstract class Hoard<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
+    public abstract class HoardBase<TKey, TValue> : IDisposable where TKey : IComparable<TKey>
     {
         #region Fields + Properties
 
@@ -73,12 +73,12 @@ namespace Library.Cache
 
         #region Constructors
 
-        internal Hoard(string path)
+        internal HoardBase(string path)
         {
             _Library = new PersistentDictionary<TKey, TValue>(Constants.CachePath + path);
         }
 
-        private Hoard()
+        private HoardBase()
         {
         }
 

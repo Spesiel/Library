@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Cache.Objects;
+using System;
 
 namespace Library.Cache
 {
@@ -6,28 +7,28 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public sealed class Tags : Hoard<Guid, string>
+    public sealed class PersonHoard : HoardBase<Guid, Person>
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler TagAdded;
+        internal static event AsyncLibraryEventHandler PersonAdded;
 
         #endregion Delegates + Events
 
         #region Methods
 
-        public void Add(string file, string tag)
+        public void Add(string file, Person person)
         {
             Guid guid = Guid.NewGuid();
-            base.Add(guid, tag);
-            TagAdded(new LibraryEventAsyncArgs(file, guid));
+            Add(guid, person);
+            PersonAdded(new LibraryEventAsyncArgs(file, guid));
         }
 
         #endregion Methods
 
         #region Constructors
 
-        public Tags() : base(nameof(Tags))
+        public PersonHoard() : base(nameof(PersonHoard))
         {
         }
 

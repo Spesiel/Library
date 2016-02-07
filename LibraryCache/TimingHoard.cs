@@ -7,7 +7,7 @@ namespace Library.Cache
     /// Library holding the items.<br/>
     /// As they are unique for each file, the key is always the file itself
     /// </summary>
-    public sealed class Timings : Hoard<Guid, Timing>
+    public sealed class TimingHoard : HoardBase<Guid, Timing>
     {
         #region Delegates + Events
 
@@ -20,7 +20,7 @@ namespace Library.Cache
         public void Add(string file, Timing timing)
         {
             Guid guid = Guid.NewGuid();
-            base.Add(guid, timing);
+            Add(guid, timing);
             TimingAdded(new LibraryEventAsyncArgs(file, guid));
         }
 
@@ -28,7 +28,7 @@ namespace Library.Cache
 
         #region Constructors
 
-        public Timings() : base(nameof(Timings))
+        public TimingHoard() : base(nameof(TimingHoard))
         {
         }
 

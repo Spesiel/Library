@@ -92,12 +92,12 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hoard.cs" />
+    <Compile Include="HoardBase.cs" />
     <Compile Include="CLSCompliant.cs" />
-    <Compile Include="Items.cs" />
+    <Compile Include="ItemHoard.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Catalog.cs" />
-    <Compile Include="%28AsyncEvents%29.cs" />
+    <Compile Include="LibraryEventAsyncArgs.cs" />
     <Compile Include="CacheManager.cs" />
     <Compile Include="Objects\Exif.cs" />
     <Compile Include="Objects\IArtifact.cs" />
@@ -105,10 +105,10 @@
     <Compile Include="Objects\Item.cs" />
     <Compile Include="Objects\Person.cs" />
     <Compile Include="Objects\Timing.cs" />
-    <Compile Include="Persons.cs" />
+    <Compile Include="PersonHoard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tags.cs" />
-    <Compile Include="Timings.cs" />
+    <Compile Include="TagHoard.cs" />
+    <Compile Include="TimingHoard.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />

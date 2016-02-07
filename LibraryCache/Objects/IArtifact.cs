@@ -4,7 +4,7 @@
     {
         #region Methods
 
-        bool Equals(object obj);
+        bool Equals(object value);
 
         int GetHashCode();
 
