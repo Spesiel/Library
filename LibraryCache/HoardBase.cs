@@ -11,6 +11,7 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
+        public int Count { get { return Library.Count; } }
         public IList<TKey> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
         public PersistentDictionary<TKey, TValue> Library { get { return _Library; } }
         private PersistentDictionary<TKey, TValue> _Library;

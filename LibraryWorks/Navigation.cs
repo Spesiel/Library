@@ -10,6 +10,11 @@ namespace Library.Works
     {
         #region Methods
 
+        public static Item Get(string current)
+        {
+            return CacheManager.Items[current];
+        }
+
         public static Item GetNext(string location, string current)
         {
             Tuple<int, int> res = CacheManager.IndexOf(location, current, Kind.Item);
@@ -47,5 +52,24 @@ namespace Library.Works
         }
 
         #endregion GetAll
+
+        #region Count
+
+        public static int CountValues(string location)
+        {
+            return new List<string>(CacheManager.SearchItems(location)).Count;
+        }
+
+        public static int CountValuesWhereExifIsPresent()
+        {
+            return CacheManager.CountValuesWhere(v => v.Exif.HasBeenSet);
+        }
+
+        public static int CountValuesWhereThumbnailIsPresent()
+        {
+            return CacheManager.CountValuesWhere(v => v.Thumbnail != null);
+        }
+
+        #endregion Count
     }
 }

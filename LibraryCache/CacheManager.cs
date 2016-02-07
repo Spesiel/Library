@@ -83,40 +83,33 @@ namespace Library.Cache
         public static Tuple<int, int> IndexOf(string location, object key, Kind kind)
         {
             int index = -1;
-            if (!Kind.Item.Equals(kind)) index = Search(location, kind).ToList().IndexOf(key as IArtifact);
-
             int count = -1;
 
-            switch (kind)
+            if (Kind.Item.Equals(kind))
             {
-                case Kind.Item:
-                    index = Items.Keys.Where(k => (k as string).StartsWith(location)).OrderBy(o => o).ToList().
-                        IndexOf(key as string);
-                    count = Items.Keys.Count;
-                    break;
-
-                case Kind.Person:
-                    count = Persons.Keys.Count;
-                    break;
-
-                case Kind.Timing:
-                    count = Timings.Keys.Count;
-                    break;
-
-                case Kind.Tag:
-                    count = Tags.Keys.Count;
-                    break;
-
-                default:
-                    break;
+                List<string> list = SearchItems(location).ToList();
+                index = list.IndexOf(key as string);
+                count = list.Count;
             }
+            else
+            {
+                List<IArtifact> list = Search(location, kind).ToList();
+
+                index = list.IndexOf(key as IArtifact);
+                count = list.Count;
+            }
+
             return Tuple.Create(index, count);
         }
+
+        #endregion Methods
+
+        #region Searches
 
         public static IEnumerable<IArtifact> Search(string location, Kind kind)
         {
             IEnumerable<IArtifact> ans = null;
-            IEnumerable<Guid> guids = Index.Get(Items.Search(location), kind);
+            IEnumerable<Guid> guids = SearchIndex(location, kind);
 
             switch (kind)
             {
@@ -139,7 +132,40 @@ namespace Library.Cache
             return ans;
         }
 
-        #endregion Methods
+        public static IEnumerable<Guid> SearchIndex(string location, Kind kind)
+        {
+            return Index.Get(Items.Search(location), kind);
+        }
+
+        public static IEnumerable<string> SearchItems(string location)
+        {
+            return Items.Keys.Where(k => (k as string).StartsWith(location)).OrderBy(o => o);
+        }
+
+        #endregion Searches
+
+        #region Counts
+
+        public static int CountValues(string location)
+        {
+            int ans = 0;
+            if (location == null)
+            {
+                ans = Items.Count;
+            }
+            else {
+                ans = Items.Keys.Count(i => i.StartsWith(location, StringComparison.OrdinalIgnoreCase));
+            }
+
+            return ans;
+        }
+
+        public static int CountValuesWhere(Func<Item, bool> predicate)
+        {
+            return Items.Library.Values.Count(predicate);
+        }
+
+        #endregion Counts
 
         #region Flush / Clear
 
