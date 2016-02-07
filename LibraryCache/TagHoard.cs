@@ -20,7 +20,7 @@ namespace Library.Cache
         {
             Guid guid = Guid.NewGuid();
             Add(guid, tag);
-            TagAdded(new LibraryEventAsyncArgs(file, guid));
+            TagAdded(new CacheEventAsyncArgs(file, guid));
         }
 
         #endregion Methods
