@@ -7,8 +7,8 @@
     <ProjectGuid>{307D78FF-C3DF-4B66-8C96-8FBBC113AF8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Library.Queue</RootNamespace>
-    <AssemblyName>LibraryQueue</AssemblyName>
+    <RootNamespace>Library.Queuing</RootNamespace>
+    <AssemblyName>LibraryQueuing</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,12 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Management" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QueueEventAsyncArgs.cs" />
+    <Compile Include="QueuingEventAsyncArgs.cs" />
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Worker.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibraryCache\LibraryCache.csproj">
