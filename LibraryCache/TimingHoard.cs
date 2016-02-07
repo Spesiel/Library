@@ -11,7 +11,7 @@ namespace Library.Cache
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler TimingAdded;
+        internal static event AsyncCacheEventHandler TimingAdded;
 
         #endregion Delegates + Events
 

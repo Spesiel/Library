@@ -10,7 +10,7 @@ namespace Library.Cache
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler TagAdded;
+        internal static event AsyncCacheEventHandler TagAdded;
 
         #endregion Delegates + Events
 
