@@ -21,7 +21,7 @@ namespace Library.Cache
         {
             Guid guid = Guid.NewGuid();
             Add(guid, person);
-            PersonAdded(new LibraryEventAsyncArgs(file, guid));
+            PersonAdded(new CacheEventAsyncArgs(file, guid));
         }
 
         #endregion Methods

@@ -21,7 +21,7 @@ namespace Library.Cache
         internal override void Remove(string file)
         {
             base.Remove(file);
-            ItemRemoved(new LibraryEventAsyncArgs(file));
+            ItemRemoved(new CacheEventAsyncArgs(file));
         }
 
         internal IEnumerable<string> Search(string location)

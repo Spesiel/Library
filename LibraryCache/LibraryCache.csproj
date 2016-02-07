@@ -97,7 +97,7 @@
     <Compile Include="ItemHoard.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Catalog.cs" />
-    <Compile Include="LibraryEventAsyncArgs.cs" />
+    <Compile Include="CacheEventAsyncArgs.cs" />
     <Compile Include="CacheManager.cs" />
     <Compile Include="Objects\Exif.cs" />
     <Compile Include="Objects\IArtifact.cs" />

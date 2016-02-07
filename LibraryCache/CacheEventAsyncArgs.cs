@@ -2,9 +2,9 @@
 
 namespace Library.Cache
 {
-    internal delegate void AsyncLibraryEventHandler(LibraryEventAsyncArgs arg);
+    internal delegate void AsyncLibraryEventHandler(CacheEventAsyncArgs arg);
 
-    internal class LibraryEventAsyncArgs : EventArgs
+    internal class CacheEventAsyncArgs : EventArgs
     {
         #region Fields + Properties
 
@@ -16,13 +16,13 @@ namespace Library.Cache
         #region Constructors
 
         // Is in fact called through async call when fired
-        public LibraryEventAsyncArgs(string file)
+        public CacheEventAsyncArgs(string file)
         {
             File = file;
         }
 
         // Is in fact called through async call when fired
-        public LibraryEventAsyncArgs(string file, Guid guid)
+        public CacheEventAsyncArgs(string file, Guid guid)
         {
             File = file;
             Guid = guid;
