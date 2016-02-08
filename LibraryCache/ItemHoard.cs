@@ -12,7 +12,7 @@ namespace Library.Cache
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler ItemRemoved;
+        internal static event AsyncCacheEventHandler ItemRemoved;
 
         #endregion Delegates + Events
 
@@ -21,7 +21,7 @@ namespace Library.Cache
         internal override void Remove(string file)
         {
             base.Remove(file);
-            ItemRemoved(new LibraryEventAsyncArgs(file));
+            ItemRemoved(new CacheEventAsyncArgs(file));
         }
 
         internal IEnumerable<string> Search(string location)

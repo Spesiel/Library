@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{41904164-8748-4C18-9C82-010F5CE0DA85}</ProjectGuid>
+    <ProjectGuid>{15586DDB-C371-497D-BC3E-4A39B1872E40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Library.Cache</RootNamespace>
-    <AssemblyName>LibraryCache</AssemblyName>
+    <RootNamespace>Library.Works</RootNamespace>
+    <AssemblyName>LibraryWorks</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -46,8 +46,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -57,10 +57,23 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
-      <Project>{b855af63-4585-4fcd-9b19-d67c0c9d8df0}</Project>
-      <Name>LibraryResources</Name>
-    </ProjectReference>
+    <Compile Include="CLSCompliant.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="Navigation.cs" />
+    <Compile Include="NerdStats.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Treatment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NReco.VideoConverter, Version=1.0.8.0, Culture=neutral, PublicKeyToken=395ccb334978a0cd, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.VideoConverter.1.0.8.0\lib\net20\NReco.VideoConverter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -75,40 +88,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Esent.Collections, Version=1.9.3.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Database.Collections.Generic.1.9.3.2\lib\net40\Esent.Collections.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Esent.Interop, Version=1.9.3.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\ManagedEsent.1.9.3.2\lib\net40\Esent.Interop.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Esent.Isam, Version=1.9.3.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Database.Isam.1.9.3.2\lib\net40\Esent.Isam.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="HoardBase.cs" />
-    <Compile Include="CLSCompliant.cs" />
-    <Compile Include="ItemHoard.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Catalog.cs" />
-    <Compile Include="CacheEventAsyncArgs.cs" />
-    <Compile Include="CacheManager.cs" />
-    <Compile Include="Objects\Exif.cs" />
-    <Compile Include="Objects\IArtifact.cs" />
-    <Compile Include="Objects\Record.cs" />
-    <Compile Include="Objects\Item.cs" />
-    <Compile Include="Objects\Person.cs" />
-    <Compile Include="Objects\Timing.cs" />
-    <Compile Include="PersonHoard.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TagHoard.cs" />
-    <Compile Include="TimingHoard.cs" />
+    <ProjectReference Include="..\LibraryCache\LibraryCache.csproj">
+      <Project>{41904164-8748-4c18-9c82-010f5ce0da85}</Project>
+      <Name>LibraryCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
+      <Project>{b855af63-4585-4fcd-9b19-d67c0c9d8df0}</Project>
+      <Name>LibraryResources</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />

@@ -11,7 +11,7 @@ namespace Library.Cache
     {
         #region Delegates + Events
 
-        internal static event AsyncLibraryEventHandler TimingAdded;
+        internal static event AsyncCacheEventHandler TimingAdded;
 
         #endregion Delegates + Events
 
@@ -21,7 +21,7 @@ namespace Library.Cache
         {
             Guid guid = Guid.NewGuid();
             Add(guid, timing);
-            TimingAdded(new LibraryEventAsyncArgs(file, guid));
+            TimingAdded(new CacheEventAsyncArgs(file, guid));
         }
 
         #endregion Methods
