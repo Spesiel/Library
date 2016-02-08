@@ -64,11 +64,15 @@
     <Compile Include="NerdStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Treatment.cs" />
+    <Compile Include="Queuing.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NReco.VideoConverter, Version=1.0.8.0, Culture=neutral, PublicKeyToken=395ccb334978a0cd, processorArchitecture=MSIL">
       <HintPath>..\packages\NReco.VideoConverter.1.0.8.0\lib\net20\NReco.VideoConverter.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Penelope.Collections">
+      <HintPath>..\..\Penelope-Core\Penelope.Collections\bin\Release\Penelope.Collections.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />

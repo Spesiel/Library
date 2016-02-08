@@ -111,7 +111,9 @@ namespace Library.Works
                 current =>
                 {
                     // Add it to the library
-                    CacheManager.Items.Add(current.Replace(AtRuntime.Settings.GetDirectory, ""), new Item());
+                    string file = current.Replace(AtRuntime.Settings.GetDirectory, "");
+                    CacheManager.Items.Add(file, new Item());
+                    Queuing.Add(file);
 
                     // Report progress made
                     if (worker != null)
