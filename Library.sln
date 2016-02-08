@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryCache", "LibraryCach
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWorks", "LibraryWorks\LibraryWorks.csproj", "{15586DDB-C371-497D-BC3E-4A39B1872E40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryQueuing", "LibraryQueuing\LibraryQueuing.csproj", "{307D78FF-C3DF-4B66-8C96-8FBBC113AF8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{15586DDB-C371-497D-BC3E-4A39B1872E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15586DDB-C371-497D-BC3E-4A39B1872E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15586DDB-C371-497D-BC3E-4A39B1872E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307D78FF-C3DF-4B66-8C96-8FBBC113AF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307D78FF-C3DF-4B66-8C96-8FBBC113AF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307D78FF-C3DF-4B66-8C96-8FBBC113AF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307D78FF-C3DF-4B66-8C96-8FBBC113AF8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
