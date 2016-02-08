@@ -1,7 +1,6 @@
 ﻿using Library.Cache;
 using Library.Cache.Objects;
 using Penelope.Collections;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 
@@ -12,13 +11,12 @@ namespace Library.Works
         #region Fields + Properties
 
         public static BackgroundWorker BackgroundWorker { get { return _Worker; } }
-        public static ReadOnlyCollection<string> Queue { get { return _Queue.Queue; } }
         private static FirstInFirstOut<string> _Queue = new FirstInFirstOut<string>();
         private static BackgroundWorker _Worker = new BackgroundWorker();
 
         #endregion Fields + Properties
 
-        #region Methods
+        #region Constructor
 
         static Queuing()
         {
@@ -41,6 +39,7 @@ namespace Library.Works
 
                 // Saves the modified item
                 CacheManager.Items[key] = item;
+                BackgroundWorker.ReportProgress(100 * _Queue.Count / _Queue.PeakCount);
             };
 
             BackgroundWorker.RunWorkerCompleted += (s, args) =>
@@ -52,6 +51,20 @@ namespace Library.Works
             };
         }
 
-        #endregion Methods
+        #endregion Constructor
+
+        #region Methods: Add/Remove
+
+        public static void Add(string file)
+        {
+            _Queue.Enqueue(file);
+        }
+
+        public static void Remove(string file)
+        {
+            _Queue.Remove(file);
+        }
+
+        #endregion Methods: Add/Remove
     }
 }
