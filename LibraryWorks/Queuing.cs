@@ -18,6 +18,9 @@ namespace Library.Works
 
         #region Constructor
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1810:InitializeReferenceTypeStaticFieldsInline",
+            Justification = "We need the queue to be initialized with several events. Pretty much it should work on its own out of the box.")]
         static Queuing()
         {
             _Queue.Added += (s, args) =>
