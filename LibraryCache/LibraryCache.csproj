@@ -52,9 +52,16 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Pénélope Blossom.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Pénélope Blossom.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
