@@ -52,16 +52,22 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Pénélope Blossom.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Pénélope Blossom.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="LibraryManager.cs" />
     <Compile Include="Navigation.cs" />
-    <Compile Include="NerdStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Treatment.cs" />
     <Compile Include="Queuing.cs" />

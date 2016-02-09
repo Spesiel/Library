@@ -1,7 +1,6 @@
-﻿using Library.Resources;
-using System;
+﻿using System;
 
-namespace Library.Cache.Objects
+namespace Library.Resources.Objects
 {
     [Serializable]
     public struct Record : IArtifact

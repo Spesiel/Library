@@ -1,6 +1,6 @@
 ﻿using Library.Cache;
-using Library.Cache.Objects;
 using Library.Resources;
+using Library.Resources.Objects;
 using NReco.VideoConverter;
 using System;
 using System.Drawing;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Library.Works
 {
-    public static class Treatment
+    internal static class Treatment
     {
         #region Methods
 

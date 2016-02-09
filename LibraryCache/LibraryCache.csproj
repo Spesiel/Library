@@ -52,9 +52,16 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Pénélope Blossom.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Pénélope Blossom.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
@@ -99,12 +106,6 @@
     <Compile Include="Catalog.cs" />
     <Compile Include="CacheEventAsyncArgs.cs" />
     <Compile Include="CacheManager.cs" />
-    <Compile Include="Objects\Exif.cs" />
-    <Compile Include="Objects\IArtifact.cs" />
-    <Compile Include="Objects\Record.cs" />
-    <Compile Include="Objects\Item.cs" />
-    <Compile Include="Objects\Person.cs" />
-    <Compile Include="Objects\Timing.cs" />
     <Compile Include="PersonHoard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TagHoard.cs" />

@@ -32,6 +32,12 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Pénélope Blossom.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,14 +60,19 @@
     <Compile Include="Kind.cs" />
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Objects\Exif.cs" />
+    <Compile Include="Objects\IArtifact.cs" />
+    <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\Person.cs" />
+    <Compile Include="Objects\Record.cs" />
+    <Compile Include="Objects\Timing.cs" />
     <Compile Include="Properties.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Properties.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Objects\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets.resx">
@@ -75,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pénélope Blossom.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

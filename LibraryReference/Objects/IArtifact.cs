@@ -1,4 +1,4 @@
-﻿namespace Library.Cache.Objects
+﻿namespace Library.Resources.Objects
 {
     public interface IArtifact
     {
