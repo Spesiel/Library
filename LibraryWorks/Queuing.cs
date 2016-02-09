@@ -1,12 +1,12 @@
 ﻿using Library.Cache;
-using Library.Cache.Objects;
+using Library.Resources.Objects;
 using Penelope.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
 namespace Library.Works
 {
-    public static class Queuing
+    internal static class Queuing
     {
         #region Fields + Properties
 

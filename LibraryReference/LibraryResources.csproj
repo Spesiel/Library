@@ -55,6 +55,12 @@
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Objects\Exif.cs" />
+    <Compile Include="Objects\IArtifact.cs" />
+    <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\Person.cs" />
+    <Compile Include="Objects\Record.cs" />
+    <Compile Include="Objects\Timing.cs" />
     <Compile Include="Properties.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

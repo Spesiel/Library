@@ -1,5 +1,5 @@
-﻿using Library.Cache.Objects;
-using Library.Resources;
+﻿using Library.Resources;
+using Library.Resources.Objects;
 using Microsoft.Isam.Esent.Collections.Generic;
 using System;
 using System.Collections.Generic;

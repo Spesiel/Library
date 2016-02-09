@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="LibraryManager.cs" />
     <Compile Include="Navigation.cs" />
     <Compile Include="NerdStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

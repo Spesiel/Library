@@ -1,6 +1,6 @@
 ﻿using Library.Cache;
-using Library.Cache.Objects;
 using Library.Resources;
+using Library.Resources.Objects;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -12,7 +12,7 @@ using System.Xml;
 
 namespace Library.Works
 {
-    public static class Manager
+    public static class LibraryManager
     {
         #region Methods
 
