@@ -61,7 +61,6 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LibraryManager.cs" />
     <Compile Include="Navigation.cs" />
-    <Compile Include="NerdStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Treatment.cs" />
     <Compile Include="Queuing.cs" />

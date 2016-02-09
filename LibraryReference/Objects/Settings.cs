@@ -3,14 +3,14 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace Library.Resources
+namespace Library.Resources.Objects
 {
     [DataContract]
     public class Settings
     {
         #region Fields + Properties
 
-        public string GetDirectory { get { return InitialDirectory + Path.DirectorySeparatorChar; } }
+        public string Folder { get { return InitialDirectory + Path.DirectorySeparatorChar; } }
 
         [DataMember(Name = "Ignored")]
         public Collection<string> Ignored { get; internal set; }
@@ -34,7 +34,7 @@ namespace Library.Resources
 
         public string GetFile(string file)
         {
-            return GetDirectory + file;
+            return Folder + file;
         }
 
         public void SetIgnored(IList<string> value)

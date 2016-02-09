@@ -1,4 +1,6 @@
-﻿namespace Library.Resources
+﻿using Library.Resources.Objects;
+
+namespace Library.Resources
 {
     public static class AtRuntime
     {

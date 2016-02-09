@@ -14,6 +14,12 @@ namespace Library.Works
 {
     public static class LibraryManager
     {
+        #region Fields + Properties
+
+        private static int _NumberOfMediasLoaded;
+
+        #endregion Fields + Properties
+
         #region Methods
 
         public static int[] CheckForUpdates()
@@ -21,9 +27,9 @@ namespace Library.Works
             int[] ans = new int[2];
 
             // We got the library loaded, now we should check its integrity
-            List<string> mediasOnDisk = GetListMediasInInitialDirectory().ConvertAll(s => s.Replace(AtRuntime.Settings.GetDirectory, ""));
+            List<string> mediasOnDisk = GetListMediasInInitialDirectory().ConvertAll(s => s.Replace(AtRuntime.Settings.Folder, ""));
             //// Lists the medias missing in the library (aka New content)
-            List<string> newContent = mediasOnDisk.Except(CacheManager.Items.Keys).ToList().ConvertAll(s => s.Insert(0, AtRuntime.Settings.GetDirectory));
+            List<string> newContent = mediasOnDisk.Except(CacheManager.Items.Keys).ToList().ConvertAll(s => s.Insert(0, AtRuntime.Settings.Folder));
             ans[0] = newContent.Count;
             Add(null, newContent);
             //// Lists the medias missing in the initial directory (aka Missing content)
@@ -63,13 +69,13 @@ namespace Library.Works
 
             // Listing the medias
             List<string> medias = GetListMediasInInitialDirectory();
-            NerdStats.NumberOfMediasLoaded = medias.Count;
+            _NumberOfMediasLoaded = medias.Count;
 
             // For each media found
             Add(worker, medias);
 
             // Lists ignored files
-            AtRuntime.Settings.SetIgnored(Directory.EnumerateFiles(AtRuntime.Settings.GetDirectory, "*", SearchOption.AllDirectories).
+            AtRuntime.Settings.SetIgnored(Directory.EnumerateFiles(AtRuntime.Settings.Folder, "*", SearchOption.AllDirectories).
                  Where(file => !Constants.AllowedExtensionsImages().Any(file.ToUpperInvariant().EndsWith)).
                  Where(file => !Constants.AllowedExtensionsVideos().Any(file.ToUpperInvariant().EndsWith)).
                  ToList());
@@ -111,14 +117,14 @@ namespace Library.Works
                 current =>
                 {
                     // Add it to the library
-                    string file = current.Replace(AtRuntime.Settings.GetDirectory, "");
+                    string file = current.Replace(AtRuntime.Settings.Folder, "");
                     CacheManager.Items.Add(file, new Item());
                     Queuing.Add(file);
 
                     // Report progress made
                     if (worker != null)
                     {
-                        lock (new object()) { worker.ReportProgress(100 * CacheManager.Items.Count / NerdStats.NumberOfMediasLoaded); };
+                        lock (new object()) { worker.ReportProgress(100 * CacheManager.Items.Count / _NumberOfMediasLoaded); };
                     }
                 });
         }
@@ -129,7 +135,7 @@ namespace Library.Works
         /// <returns>The list of all medias in the initial directory</returns>
         private static List<string> GetListMediasInInitialDirectory()
         {
-            return Directory.EnumerateFiles(AtRuntime.Settings.GetDirectory, "*", SearchOption.AllDirectories).
+            return Directory.EnumerateFiles(AtRuntime.Settings.Folder, "*", SearchOption.AllDirectories).
                 Where(file =>
                 Constants.AllowedExtensionsImages().Any(file.ToUpperInvariant().EndsWith) ||
                 Constants.AllowedExtensionsVideos().Any(file.ToUpperInvariant().EndsWith)).
@@ -146,7 +152,7 @@ namespace Library.Works
                 current =>
                 {
                     // Remove it to the library
-                    CacheManager.Remove(current.Replace(AtRuntime.Settings.GetDirectory, ""));
+                    CacheManager.Remove(current.Replace(AtRuntime.Settings.Folder, ""));
                 });
         }
 
