@@ -72,7 +72,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Penelope.Collections">
-      <HintPath>..\..\Penelope-Core\Penelope.Collections\bin\Release\Penelope.Collections.dll</HintPath>
+      <HintPath>..\..\Resources\DLLs\Penelope.Collections.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
