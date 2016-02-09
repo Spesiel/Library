@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryCache", "LibraryCach
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWorks", "LibraryWorks\LibraryWorks.csproj", "{15586DDB-C371-497D-BC3E-4A39B1872E40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryPreviewer", "LibraryPreviewer\LibraryPreviewer.csproj", "{F34D9C98-548E-4AFA-8FBE-9FBB65F45BF7}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryUserInterface", "LibraryGUI\LibraryUserInterface.csproj", "{8C9855B8-85B0-4E24-BE10-6AF3BE9D1429}"
 EndProject
 Global
@@ -29,6 +31,10 @@ Global
 		{15586DDB-C371-497D-BC3E-4A39B1872E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15586DDB-C371-497D-BC3E-4A39B1872E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15586DDB-C371-497D-BC3E-4A39B1872E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34D9C98-548E-4AFA-8FBE-9FBB65F45BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34D9C98-548E-4AFA-8FBE-9FBB65F45BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34D9C98-548E-4AFA-8FBE-9FBB65F45BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34D9C98-548E-4AFA-8FBE-9FBB65F45BF7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C9855B8-85B0-4E24-BE10-6AF3BE9D1429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C9855B8-85B0-4E24-BE10-6AF3BE9D1429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C9855B8-85B0-4E24-BE10-6AF3BE9D1429}.Release|Any CPU.ActiveCfg = Release|Any CPU
