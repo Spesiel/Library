@@ -123,13 +123,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
-      <Project>{b855af63-4585-4fcd-9b19-d67c0c9d8df0}</Project>
-      <Name>LibraryResources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LibraryWorks\LibraryWorks.csproj">
-      <Project>{15586ddb-c371-497d-bc3e-4a39b1872e40}</Project>
-      <Name>LibraryWorks</Name>
+    <ProjectReference Include="..\LibraryControls\LibraryControls.csproj">
+      <Project>{a13a3d2e-df55-45b8-a29c-2a6eb35c4b53}</Project>
+      <Name>LibraryControls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
