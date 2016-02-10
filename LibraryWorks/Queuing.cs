@@ -18,6 +18,10 @@ namespace Library.Works
 
         #region Constructor
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1810:InitializeReferenceTypeStaticFieldsInline",
+            Justification =
+            "Necessary in this situation, as we want the events to be initialized right off the bat")]
         static Queuing()
         {
             _Queue.Added += (s, args) =>
