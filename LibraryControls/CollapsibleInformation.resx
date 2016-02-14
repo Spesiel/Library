@@ -117,35 +117,158 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPageInformations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabPageInformations.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="listTag.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="tabPageInformations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>448, 183</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="listTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 173</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabPageInformations.TabIndex" type="System.Int32, mscorlib">
+  <data name="listTag.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tabPageInformations.Text" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;listTag.Name" xml:space="preserve">
+    <value>listTag</value>
   </data>
-  <data name="&gt;&gt;tabPageInformations.Name" xml:space="preserve">
-    <value>tabPageInformations</value>
+  <data name="&gt;&gt;listTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPageInformations.Type" xml:space="preserve">
+  <data name="&gt;&gt;listTag.Parent" xml:space="preserve">
+    <value>tabPageTag</value>
+  </data>
+  <data name="&gt;&gt;listTag.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageTag.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 179</value>
+  </data>
+  <data name="tabPageTag.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageTag.Text" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="&gt;&gt;tabPageTag.Name" xml:space="preserve">
+    <value>tabPageTag</value>
+  </data>
+  <data name="&gt;&gt;tabPageTag.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPageInformations.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPageTag.Parent" xml:space="preserve">
     <value>tabControl</value>
   </data>
-  <data name="&gt;&gt;tabPageInformations.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPageTag.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="listExif.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listExif.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="listExif.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 173</value>
+  </data>
+  <data name="listExif.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listExif.Name" xml:space="preserve">
+    <value>listExif</value>
+  </data>
+  <data name="&gt;&gt;listExif.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listExif.Parent" xml:space="preserve">
+    <value>tabPageExif</value>
+  </data>
+  <data name="&gt;&gt;listExif.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageExif.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageExif.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageExif.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 179</value>
+  </data>
+  <data name="tabPageExif.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageExif.Text" xml:space="preserve">
+    <value>EXIF</value>
+  </data>
+  <data name="&gt;&gt;tabPageExif.Name" xml:space="preserve">
+    <value>tabPageExif</value>
+  </data>
+  <data name="&gt;&gt;tabPageExif.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageExif.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPageExif.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listPerson.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listPerson.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listPerson.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 179</value>
+  </data>
+  <data name="listPerson.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listPerson.Name" xml:space="preserve">
+    <value>listPerson</value>
+  </data>
+  <data name="&gt;&gt;listPerson.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listPerson.Parent" xml:space="preserve">
+    <value>tabPagePerson</value>
+  </data>
+  <data name="&gt;&gt;listPerson.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPagePerson.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPagePerson.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 179</value>
+  </data>
+  <data name="tabPagePerson.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPagePerson.Text" xml:space="preserve">
+    <value>Persons</value>
+  </data>
+  <data name="&gt;&gt;tabPagePerson.Name" xml:space="preserve">
+    <value>tabPagePerson</value>
+  </data>
+  <data name="&gt;&gt;tabPagePerson.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPagePerson.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPagePerson.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -154,7 +277,7 @@
     <value>0, 20</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>456, 209</value>
+    <value>452, 205</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -175,10 +298,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>456, 229</value>
+    <value>452, 225</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>CollapsibleInformations</value>
+    <value>CollapsibleInformation</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>Penelope.Controls.Collapsible, Penelope.Controls, Version=1.0.0.1, Culture=neutral, PublicKeyToken=71f6bc0749e9e48d</value>

@@ -19,12 +19,17 @@ namespace Library.Previewer
             InitializeComponent();
 
             // One argument, checking if it's a file the application can load
-            if (args.Length == 1 &&
-                (Resources.Constants.AllowedExtensionsImages.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase)) ||
-                Resources.Constants.AllowedExtensionsVideos.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))) &&
-                System.IO.File.Exists(args[0]))
+            if (args.Length == 1 && (
+                Resources.Constants.
+                    AllowedExtensionsImages.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))
+                || Resources.Constants.
+                    AllowedExtensionsVideos.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))
+                ) && System.IO.File.Exists(args[0]))
             {
                 //TODO Try and load the file
+                // Disable the information panel
+                Informations.Enabled = false;
+                Informations.Visible = false;
             }
         }
 
