@@ -12,8 +12,8 @@ namespace Library.Resources
     {
         #region Fields + Properties
 
-        public static string[] AllowedExtensionsImages => new string[] { "JPG", "JPEG", "PNG", "GIF" };
-        public static string[] AllowedExtensionsVideos => new string[] { "MOV", "MP4", "AVI" };
+        public static IList<string> AllowedExtensionsImages => new List<string> { "JPG", "JPEG", "PNG", "GIF" };
+        public static IList<string> AllowedExtensionsVideos => new List<string> { "MOV", "MP4", "AVI" };
 
         /// <summary>
         /// Path to the folder containing the Cache
