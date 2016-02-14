@@ -11,9 +11,9 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
-        public int Count { get { return Library.Count; } }
-        public IList<TKey> Keys { get { return _Library.Keys.OrderBy(k => k).ToList(); } }
-        public PersistentDictionary<TKey, TValue> Library { get { return _Library; } }
+        public int Count => Library.Count;
+        public IList<TKey> Keys => _Library.Keys.OrderBy(k => k).ToList();
+        public PersistentDictionary<TKey, TValue> Library => _Library;
         private PersistentDictionary<TKey, TValue> _Library;
 
         #endregion Fields + Properties
@@ -60,10 +60,7 @@ namespace Library.Cache
             }
         }
 
-        public IEnumerable<IArtifact> Get(IEnumerable<TKey> keys)
-        {
-            return Library.Where(l => l.Key.Equals(keys.Any())).Select(i => i.Value as IArtifact);
-        }
+        public IEnumerable<IArtifact> Get(IEnumerable<TKey> keys) => Library.Where(l => l.Key.Equals(keys.Any())).Select(i => i.Value as IArtifact);
 
         internal virtual void Remove(TKey key)
         {

@@ -47,15 +47,9 @@ namespace Library.Resources.Objects
 
         #region Methods
 
-        public static bool operator !=(Item item1, Item item2)
-        {
-            return !item1.Equals(item2);
-        }
+        public static bool operator !=(Item item1, Item item2) => !item1.Equals(item2);
 
-        public static bool operator ==(Item item1, Item item2)
-        {
-            return item1.Equals(item2);
-        }
+        public static bool operator ==(Item item1, Item item2) => item1.Equals(item2);
 
         public override bool Equals(object obj)
         {
@@ -73,10 +67,7 @@ namespace Library.Resources.Objects
             return true;
         }
 
-        public override int GetHashCode()
-        {
-            return _Thumbnail.GetHashCode() ^ Exif.GetHashCode();
-        }
+        public override int GetHashCode() => _Thumbnail.GetHashCode() ^ Exif.GetHashCode();
 
         #endregion Methods
     }

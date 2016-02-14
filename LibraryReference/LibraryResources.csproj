@@ -57,6 +57,7 @@
       <DependentUpon>Assets.resx</DependentUpon>
     </Compile>
     <Compile Include="AtRuntime.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Kind.cs" />
     <Compile Include="CLSCompliant.cs" />
     <Compile Include="Constants.cs" />

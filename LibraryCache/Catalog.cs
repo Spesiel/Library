@@ -15,15 +15,9 @@ namespace Library.Cache
             Library.Add(id, new Record { File = file, Kind = kind });
         }
 
-        public IEnumerable<Guid> Get(IEnumerable<string> files, Kind kind)
-        {
-            return Library.Where(l => l.Value.File.Equals(files.Any()) && l.Value.Kind.Equals(kind)).Select(i => i.Key);
-        }
+        public IEnumerable<Guid> Get(IEnumerable<string> files, Kind kind) => Library.Where(l => l.Value.File.Equals(files.Any()) && l.Value.Kind.Equals(kind)).Select(i => i.Key);
 
-        public Dictionary<Guid, Kind> GetGuids(string file)
-        {
-            return Library.Where(l => l.Value.File.Equals(file)).ToDictionary(o => o.Key, o => o.Value.Kind);
-        }
+        public Dictionary<Guid, Kind> GetGuids(string file) => Library.Where(l => l.Value.File.Equals(file)).ToDictionary(o => o.Key, o => o.Value.Kind);
 
         #endregion Methods
 

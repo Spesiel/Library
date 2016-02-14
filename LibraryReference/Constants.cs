@@ -12,7 +12,7 @@ namespace Library.Resources
     {
         #region Fields + Properties
 
-        public static ParallelOptions ParallelOptions { get { return new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }; } }
+        public static ParallelOptions ParallelOptions => new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount };
 
         /// <summary>
         /// Path to the folder containing the Cache
@@ -34,25 +34,15 @@ namespace Library.Resources
 
         #region Allowed Extensions
 
-        public static string[] AllowedExtensionsImages()
-        {
-            return new string[] { "JPG", "JPEG", "PNG", "GIF" };
-        }
+        public static string[] AllowedExtensionsImages() => new string[] { "JPG", "JPEG", "PNG", "GIF" };
 
-        public static string[] AllowedExtensionsVideos()
-        {
-            return new string[] { "MOV", "MP4", "AVI" };
-        }
+        public static string[] AllowedExtensionsVideos() => new string[] { "MOV", "MP4", "AVI" };
 
         #endregion Allowed Extensions
 
         #region ExifData
 
-        public static Dictionary<int, string> ExifData
-        {
-            get
-            {
-                return new Dictionary<int, string>()
+        public static Dictionary<int, string> ExifData => new Dictionary<int, string>()
                 {
                     // GPS values
                     {0x0000,"PropertyTagGpsVer"},
@@ -274,8 +264,6 @@ namespace Library.Resources
                     {0xA301,"PropertyTagExifSceneType"},
                     {0xA302,"PropertyTagExifCfaPattern"}
                 };
-            }
-        }
 
         #endregion ExifData
     }

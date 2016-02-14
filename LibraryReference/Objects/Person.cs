@@ -15,15 +15,9 @@ namespace Library.Resources.Objects
 
         #region Methods
 
-        public static bool operator !=(Person person1, Person person2)
-        {
-            return !person1.Equals(person2);
-        }
+        public static bool operator !=(Person person1, Person person2) => !person1.Equals(person2);
 
-        public static bool operator ==(Person person1, Person person2)
-        {
-            return person1.Equals(person2);
-        }
+        public static bool operator ==(Person person1, Person person2) => person1.Equals(person2);
 
         public override bool Equals(object obj)
         {
@@ -41,10 +35,7 @@ namespace Library.Resources.Objects
             return true;
         }
 
-        public override int GetHashCode()
-        {
-            return FirstName.GetHashCode() ^ LastName.GetHashCode();
-        }
+        public override int GetHashCode() => FirstName.GetHashCode() ^ LastName.GetHashCode();
 
         #endregion Methods
     }

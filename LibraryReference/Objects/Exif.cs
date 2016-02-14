@@ -235,15 +235,9 @@ namespace Library.Resources.Objects
 
         #region Methods
 
-        public static bool operator !=(Exif item1, Exif item2)
-        {
-            return !item1.Equals(item2);
-        }
+        public static bool operator !=(Exif item1, Exif item2) => !item1.Equals(item2);
 
-        public static bool operator ==(Exif item1, Exif item2)
-        {
-            return item1.Equals(item2);
-        }
+        public static bool operator ==(Exif item1, Exif item2) => item1.Equals(item2);
 
         public override bool Equals(object obj)
         {

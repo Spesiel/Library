@@ -24,10 +24,7 @@ namespace Library.Cache
             ItemRemoved(new CacheEventAsyncArgs(file));
         }
 
-        internal IEnumerable<string> Search(string location)
-        {
-            return Library.Keys.Where(i => i.StartsWith(location)).OrderBy(o => o);
-        }
+        internal IEnumerable<string> Search(string location) => Library.Keys.Where(i => i.StartsWith(location)).OrderBy(o => o);
 
         #endregion Methods
 
