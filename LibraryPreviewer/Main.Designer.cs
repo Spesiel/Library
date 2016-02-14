@@ -29,12 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.Informations = new Library.Controls.CollapsibleInformation();
             this.SuspendLayout();
+            // 
+            // Informations
+            // 
+            this.Informations.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.Informations, "Informations");
+            this.Informations.Name = "Informations";
+            this.Informations.Title = "Informations";
             // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Informations);
             this.DoubleBuffered = true;
             this.Name = "Main";
             this.ResumeLayout(false);
@@ -42,6 +51,8 @@
         }
 
         #endregion
+
+        private Controls.CollapsibleInformation Informations;
     }
 }
 

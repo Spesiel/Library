@@ -55,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLSCompliant.cs" />
+    <Compile Include="CollapsibleInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CollapsibleInformation.Designer.cs">
+      <DependentUpon>CollapsibleInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -70,6 +76,11 @@
       <Project>{15586ddb-c371-497d-bc3e-4a39b1872e40}</Project>
       <Name>LibraryWorks</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CollapsibleInformation.resx">
+      <DependentUpon>CollapsibleInformation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
