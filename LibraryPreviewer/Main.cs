@@ -14,7 +14,21 @@ namespace Library.Previewer
     {
         #region Constructors
 
-        public Main()
+        public Main(string[] args)
+        {
+            InitializeComponent();
+
+            // One argument, checking if it's a file the application can load
+            if (args.Length == 1 &&
+                (Resources.Constants.AllowedExtensionsImages.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase)) ||
+                Resources.Constants.AllowedExtensionsVideos.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))) &&
+                System.IO.File.Exists(args[0]))
+            {
+                //TODO Try and load the file
+            }
+        }
+
+        internal Main()
         {
             InitializeComponent();
         }

@@ -127,6 +127,10 @@
       <Project>{a13a3d2e-df55-45b8-a29c-2a6eb35c4b53}</Project>
       <Name>LibraryControls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
+      <Project>{b855af63-4585-4fcd-9b19-d67c0c9d8df0}</Project>
+      <Name>LibraryResources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

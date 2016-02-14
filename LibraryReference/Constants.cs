@@ -12,33 +12,31 @@ namespace Library.Resources
     {
         #region Fields + Properties
 
-        public static ParallelOptions ParallelOptions => new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount };
+        public static string[] AllowedExtensionsImages => new string[] { "JPG", "JPEG", "PNG", "GIF" };
+        public static string[] AllowedExtensionsVideos => new string[] { "MOV", "MP4", "AVI" };
 
         /// <summary>
         /// Path to the folder containing the Cache
         /// </summary>
-        public static readonly string CachePath = BasePath + Properties.CacheNamePrefix + Path.DirectorySeparatorChar;
+        public static string CachePath => BasePath + Properties.CacheNamePrefix + Path.DirectorySeparatorChar;
+
+        /// <summary>
+        /// Parallelism options when running parallel tasks
+        /// </summary>
+        public static ParallelOptions ParallelOptions => new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount };
 
         /// <summary>
         /// Path to the file containing the Settings
         /// </summary>
-        public static readonly string SettingsFile = BasePath + Properties.SettingsFile;
+        public static string SettingsFile => BasePath + Properties.SettingsFile;
 
         /// <summary>
         /// The base path for all the files
         /// </summary>
         //TOFIX Change the base folder path
-        private static readonly string BasePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Path.DirectorySeparatorChar;
+        private static string BasePath => Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Path.DirectorySeparatorChar;
 
         #endregion Fields + Properties
-
-        #region Allowed Extensions
-
-        public static string[] AllowedExtensionsImages() => new string[] { "JPG", "JPEG", "PNG", "GIF" };
-
-        public static string[] AllowedExtensionsVideos() => new string[] { "MOV", "MP4", "AVI" };
-
-        #endregion Allowed Extensions
 
         #region ExifData
 

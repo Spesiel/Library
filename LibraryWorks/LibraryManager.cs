@@ -76,8 +76,8 @@ namespace Library.Works
 
             // Lists ignored files
             AtRuntime.Settings.SetIgnored(Directory.EnumerateFiles(AtRuntime.Settings.Folder, "*", SearchOption.AllDirectories).
-                 Where(file => !Constants.AllowedExtensionsImages().Any(file.ToUpperInvariant().EndsWith)).
-                 Where(file => !Constants.AllowedExtensionsVideos().Any(file.ToUpperInvariant().EndsWith)).
+                 Where(file => !Constants.AllowedExtensionsImages.Any(file.ToUpperInvariant().EndsWith)).
+                 Where(file => !Constants.AllowedExtensionsVideos.Any(file.ToUpperInvariant().EndsWith)).
                  ToList());
         }
 
@@ -136,8 +136,8 @@ namespace Library.Works
         private static List<string> GetListMediasInInitialDirectory() =>
             Directory.EnumerateFiles(AtRuntime.Settings.Folder, "*", SearchOption.AllDirectories).
                 Where(file =>
-                Constants.AllowedExtensionsImages().Any(file.ToUpperInvariant().EndsWith) ||
-                Constants.AllowedExtensionsVideos().Any(file.ToUpperInvariant().EndsWith)).
+                Constants.AllowedExtensionsImages.Any(file.ToUpperInvariant().EndsWith) ||
+                Constants.AllowedExtensionsVideos.Any(file.ToUpperInvariant().EndsWith)).
                 ToList();
 
         /// <summary>

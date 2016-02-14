@@ -47,7 +47,7 @@ namespace Library.Works
             {
                 string fileGotten = AtRuntime.Settings.GetFile(pathToFile);
 
-                if (Constants.AllowedExtensionsImages().Any(fileGotten.ToUpperInvariant().EndsWith))
+                if (Constants.AllowedExtensionsImages.Any(fileGotten.ToUpperInvariant().EndsWith))
                 {
                     using (FileStream fs = new FileStream(fileGotten, FileMode.Open, FileAccess.Read))
                     {
