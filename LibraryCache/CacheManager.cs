@@ -11,11 +11,11 @@ namespace Library.Cache
     {
         #region Fields + Properties
 
-        public static ItemHoard Items { get { return _Items; } }
-        public static PersonHoard Persons { get { return _Persons; } }
-        public static TagHoard Tags { get { return _Tags; } }
-        public static TimingHoard Timings { get { return _Timings; } }
-        internal static Catalog Index { get { return _Index; } }
+        public static ItemHoard Items => _Items;
+        public static PersonHoard Persons => _Persons;
+        public static TagHoard Tags => _Tags;
+        public static TimingHoard Timings => _Timings;
+        internal static Catalog Index => _Index;
         private static Catalog _Index = new Catalog();
         private static ItemHoard _Items = new ItemHoard();
         private static PersonHoard _Persons = new PersonHoard();
@@ -137,17 +137,11 @@ namespace Library.Cache
             return ans;
         }
 
-        public static IEnumerable<Guid> SearchIndex(string location, Kind kind)
-        {
-            return Index.Get(Items.Search(location), kind);
-        }
+        public static IEnumerable<Guid> SearchIndex(string location, Kind kind) => Index.Get(Items.Search(location), kind);
 
-        public static IEnumerable<string> SearchItems(string location)
-        {
-            return Items.Keys.Where(k => (k as string).
-                StartsWith(location, StringComparison.OrdinalIgnoreCase)).
-                OrderBy(o => o);
-        }
+        public static IEnumerable<string> SearchItems(string location) => Items.Keys.Where(k => (k as string).
+                                                                                        StartsWith(location, StringComparison.OrdinalIgnoreCase)).
+    OrderBy(o => o);
 
         #endregion Searches
 
@@ -167,10 +161,7 @@ namespace Library.Cache
             return ans;
         }
 
-        public static int CountValuesWhere(Func<Item, bool> predicate)
-        {
-            return Items.Library.Values.Count(predicate);
-        }
+        public static int CountValuesWhere(Func<Item, bool> predicate) => Items.Library.Values.Count(predicate);
 
         #endregion Counts
 

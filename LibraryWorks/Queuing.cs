@@ -10,7 +10,7 @@ namespace Library.Works
     {
         #region Fields + Properties
 
-        public static BackgroundWorker BackgroundWorker { get { return _Worker; } }
+        public static BackgroundWorker BackgroundWorker => _Worker;
         private static FirstInFirstOut<string> _Queue = new FirstInFirstOut<string>();
         private static BackgroundWorker _Worker = new BackgroundWorker();
 
