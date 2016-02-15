@@ -26,7 +26,9 @@ namespace Library.Previewer
                     AllowedExtensionsVideos.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))
                 ) && System.IO.File.Exists(args[0]))
             {
-                //TODO Try and load the file
+                // Load the pic
+                pictureBox.LoadAsync(args[0]);
+
                 // Disable the information panel
                 Informations.Enabled = false;
                 Informations.Visible = false;

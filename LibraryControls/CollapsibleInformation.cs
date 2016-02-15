@@ -26,9 +26,12 @@ namespace Library.Controls
             InitializeComponent();
 
             SetCollapsingParameters(Size, tabControl, true);
-            FillExif();
-            FillPersons();
-            FillTags();
+            if (File != null)
+            {
+                FillExif();
+                FillPersons();
+                FillTags();
+            }
         }
 
         private void FillExif()
