@@ -1,4 +1,5 @@
 ﻿using Library.Resources.Objects;
+using Library.Works;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,7 @@ namespace Library.Controls
 
         private void FillExif()
         {
-            Exif exif = Works.Navigation.Get(File).Exif;
+            Exif exif = Navigation.Get(File).Exif;
             foreach (PropertyInfo item in exif.GetType().GetProperties())
             {
                 if (!nameof(exif.HasBeenSet).Equals(item.Name))
@@ -44,7 +45,7 @@ namespace Library.Controls
 
         private void FillPersons()
         {
-            foreach (Person p in Works.Navigation.GetAllPersons(File))
+            foreach (Person p in Navigation.GetAllPersons(File))
             {
                 if (string.IsNullOrEmpty(p.DisplayName))
                 {
@@ -59,7 +60,7 @@ namespace Library.Controls
 
         private void FillTags()
         {
-            foreach (string s in Works.Navigation.GetAllTags(File))
+            foreach (string s in Navigation.GetAllTags(File))
             {
                 listTag.Items.Add(s);
             }
