@@ -28,22 +28,31 @@ namespace Library.Works
 
         #region Methods
 
-        public static void Remove(string location, Kind kind, IEnumerable<object> list)
+        public static void Add(string file, Kind kind, IList<object> listNewObjects)
         {
-            IEnumerable<Guid> listing = CacheManager.SearchIndex(location, kind);
+            if (listNewObjects != null && listNewObjects.Count > 0)
+            {
+                foreach (object item in listNewObjects)
+                {
+                    Set(file, kind, null, item);
+                }
+            }
+        }
 
+        public static void Remove(Kind kind, IEnumerable<object> list)
+        {
             switch (kind)
             {
                 case Kind.Person:
-                    CacheManager.Persons.Remove(list as IEnumerable<Guid>);
+                    CacheManager.Persons.Remove(CacheManager.Persons.Find(list as IEnumerable<Person>));
                     break;
 
                 case Kind.Timing:
-                    CacheManager.Timings.Remove(list as IEnumerable<Guid>);
+                    CacheManager.Timings.Remove(CacheManager.Timings.Find(list as IEnumerable<Timing>));
                     break;
 
                 case Kind.Tag:
-                    CacheManager.Tags.Remove(list as IEnumerable<Guid>);
+                    CacheManager.Tags.Remove(CacheManager.Tags.Find(list as IEnumerable<string>));
                     break;
 
                 default:
@@ -51,40 +60,41 @@ namespace Library.Works
             }
         }
 
-        public static void Set(string file, Kind kind, object oldObj, object newObj)
+        public static void Set(string file, Kind kind, object oldValue, object newValue)
         {
             switch (kind)
             {
                 case Kind.Person:
-                    if (oldObj == null)
+                    if (oldValue == null)
                     {
-                        CacheManager.Persons.Add(file, (Person)newObj);
+                        CacheManager.Persons.Add(file, (Person)newValue);
                     }
                     else
                     {
-                        CacheManager.Persons.Set(file, (Person)oldObj, (Person)newObj);
+                        CacheManager.Persons.Set((Person)oldValue, (Person)newValue);
                     }
                     break;
 
                 case Kind.Timing:
-                    if (oldObj == null)
+                    if (oldValue == null)
                     {
-                        CacheManager.Timings.Add(file, (Timing)newObj);
+                        CacheManager.Timings.Add(file, (Timing)newValue);
                     }
                     else
                     {
-                        CacheManager.Timings.Set(file, (Timing)oldObj, (Timing)newObj);
+                        CacheManager.Timings.Set((Timing)oldValue, (Timing)newValue);
                     }
                     break;
 
                 case Kind.Tag:
-                    if (oldObj == null)
+                    string str = (newValue as string).Trim();
+                    if (oldValue == null)
                     {
-                        CacheManager.Tags.Add(file, newObj as string);
+                        CacheManager.Tags.Add(file, str);
                     }
                     else
                     {
-                        CacheManager.Tags.Set(file, oldObj as string, newObj as string);
+                        CacheManager.Tags.Set(oldValue as string, str);
                     }
                     break;
 

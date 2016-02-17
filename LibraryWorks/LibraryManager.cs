@@ -149,8 +149,8 @@ namespace Library.Works
             Parallel.ForEach(medias, Constants.ParallelOptions,
                 current =>
                 {
-                // Remove it to the library
-                CacheManager.Remove(current.Replace(AtRuntime.Settings.Folder, ""));
+                    // Remove it to the library
+                    CacheManager.Remove(current.Replace(AtRuntime.Settings.Folder, ""));
                 });
         }
 

@@ -60,6 +60,8 @@ namespace Library.Cache
             }
         }
 
+        public IEnumerable<TKey> Find(IEnumerable<TValue> values) => Library.Where(i => values.Any().Equals(i.Value)).Select(i => i.Key);
+
         public IEnumerable<IArtifact> Get(IEnumerable<TKey> keys) => Library.Where(l => l.Key.Equals(keys.Any())).Select(i => i.Value as IArtifact);
 
         public virtual bool Remove(TKey key) => Library.Remove(key);

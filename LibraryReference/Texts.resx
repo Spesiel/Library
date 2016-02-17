@@ -117,48 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Add" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEUAAAD///+l2Z/dAAAACXBIWXMA
-        AA7DAAAOwwHHb6hkAAAAB3RJTUUH3gEZCCMgf0XgSwAAAB5JREFUGNNj+A8EUOIDP4nEAQYGZmII0k2G
-        uur/fwCjfVHNz/6bJgAAAABJRU5ErkJggg==
-</value>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="ArrowLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH3gEZCCMgf0XgSwAAAL9JREFU
-        WEfd0sEKwyAQRVH/2qVb/9rwoEIIJnPHTBVyYKAL6bvQprbZNwNqrb9PtvCAUkpLiX9taEAf3xJwHl8e
-        cB1fGjAaXxZwN66jpgOexnXUVIA1rqPcAWRcR7kC6LiOwi894zoKvfSO6yjz5cy4jjJf5pyHA9ZR6OXW
-        n6Db+ifsPBGUK0BoBOUOEBJBTQWIFUFNB8hTBPUqQO4iqNcBMoqgQgLkGkGFBcg5ggoNkB5BhQeIIqi/
-        BHhsDmjtALkApukL1N6yAAAAAElFTkSuQmCC
-</value>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
   </data>
-  <data name="ArrowRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH3gEZCCMgf0XgSwAAAKZJREFU
-        WEfd0jsKxDAQBFHdWqFS3XpMgVLDfHoQdsGAN1j6gT3sct8B7L3PkzY3YIxha63zS1cI0IEIA9SIFECJ
-        SANUiBKAqyLKAK6CkAC4LEIG4DIIKYCLIuQALoJoAXBeRBuA8yBaAXPO8+/3/vkKrn6EkXGSAqLjJANk
-        xkkCyI5TGVAZpxKgOk5pgGKcUgDVOIUBynEKAdTj5AZ0jJMb0NVlgNkDk3Sm6R870aQAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="Remove" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH3gEZCCMgf0XgSwAAAQdJREFU
-        WEfVlkEOgzAMBPNrjlzz61SL5CgQY68dVNqRLPWQ7A4QQUt7md8UqLUe8xRW3iSw73srpRyD36t4eSeB
-        cbG1iYXJ6wLaYpmMBJvXBbZtUxfLRM4E1moZMugS3EcwDnMnohnmIdTGksjsnQRAJiizB6gCIBKYLQe3
-        AoAJXikHpgDwCqzxyoErADISTDmgBEBEgi0HtABgJCLlICTgveEwkTcm+I9HECmXYSVcgUy5DCNhCjBf
-        tdWv6K2Ad+Xj1UXWXlEFMoFZiUkgGwQye08CK+VCNKMLPFEuRLK6gHWax/9wLGye+wgiV36FyTMP4Uq5
-        4OVNAgALnygXrDxV4Ju8LNDaB6Lw1ITGjyEZAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="Space" xml:space="preserve">
-    <value> </value>
-    <comment>Space character</comment>
+  <data name="AddTag" xml:space="preserve">
+    <value>Add new tags</value>
   </data>
 </root>

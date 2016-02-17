@@ -24,7 +24,7 @@ namespace Library.Cache
             PersonAdded(new CacheEventAsyncArgs(file, guid));
         }
 
-        public void Set(string file, Person oldPerson, Person newPerson)
+        public void Set(Person oldPerson, Person newPerson)
         {
             Library[Library.First(i => i.Value.Equals(oldPerson)).Key] = newPerson;
         }

@@ -24,7 +24,7 @@ namespace Library.Cache
             TimingAdded(new CacheEventAsyncArgs(file, guid));
         }
 
-        public void Set(string file, Timing oldTiming, Timing newTiming)
+        public void Set(Timing oldTiming, Timing newTiming)
         {
             Library[Library.First(i => i.Value.Equals(oldTiming)).Key] = newTiming;
         }

@@ -59,7 +59,7 @@ namespace Library.Controls
             {
                 if (string.IsNullOrEmpty(p.DisplayName))
                 {
-                    listPerson.Items.Add(p.FirstName + " " + p.LastName);
+                    listPerson.Items.Add(p.FirstName + Assets.Space + p.LastName);
                 }
                 else
                 {
@@ -116,7 +116,15 @@ namespace Library.Controls
 
         private void pictureTagAddOnClick(object sender, EventArgs e)
         {
-            //TODO Tag Add
+            using (EntryInput ei = new EntryInput(Texts.AddTag))
+            {
+                if (ei.ShowDialog(this) == DialogResult.OK)
+                {
+                    Navigation.Add(File, Kind.Tag,
+                        ei.textEntry.Text.
+                        Split(new string[] { ",", ", " }, StringSplitOptions.RemoveEmptyEntries));
+                }
+            }
         }
 
         private void pictureTagRemoveOnClick(object sender, EventArgs e)
@@ -129,7 +137,7 @@ namespace Library.Controls
 
             if (toRemove.Count > 0)
             {
-                Navigation.Remove(File, Kind.Tag, toRemove);
+                Navigation.Remove(Kind.Tag, toRemove);
             }
         }
 

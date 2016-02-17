@@ -18,10 +18,10 @@ namespace Library.Cache
 
         #region Methods
 
-        public override bool Remove(string file)
+        public override bool Remove(string key)
         {
-            bool ans = base.Remove(file);
-            ItemRemoved(new CacheEventAsyncArgs(file));
+            bool ans = base.Remove(key);
+            ItemRemoved(new CacheEventAsyncArgs(key));
 
             return ans;
         }
