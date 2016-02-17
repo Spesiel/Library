@@ -36,10 +36,16 @@
             this.listExif = new System.Windows.Forms.ListView();
             this.tabPagePerson = new System.Windows.Forms.TabPage();
             this.listPerson = new System.Windows.Forms.ListView();
+            this.tableTags = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureTagAdd = new System.Windows.Forms.PictureBox();
+            this.pictureTagRemove = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.tabPageTag.SuspendLayout();
             this.tabPageExif.SuspendLayout();
             this.tabPagePerson.SuspendLayout();
+            this.tableTags.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTagAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTagRemove)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -53,7 +59,7 @@
             // 
             // tabPageTag
             // 
-            this.tabPageTag.Controls.Add(this.listTag);
+            this.tabPageTag.Controls.Add(this.tableTags);
             resources.ApplyResources(this.tabPageTag, "tabPageTag");
             this.tabPageTag.Name = "tabPageTag";
             this.tabPageTag.UseVisualStyleBackColor = true;
@@ -63,11 +69,12 @@
             resources.ApplyResources(this.listTag, "listTag");
             this.listTag.LabelEdit = true;
             this.listTag.Name = "listTag";
+            this.tableTags.SetRowSpan(this.listTag, 5);
+            this.listTag.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listTag.UseCompatibleStateImageBehavior = false;
             this.listTag.View = System.Windows.Forms.View.List;
-            this.listTag.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listTagOnAfterLabelEdit);
-            this.listTag.BeforeLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listTagOnBeforeLabelEdit);
-            this.listTag.DoubleClick += new System.EventHandler(this.listTagOnDoubleClick);
+            this.listTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listTagOnKeyPress);
+            this.listTag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listTagOnMouseDown);
             // 
             // tabPageExif
             // 
@@ -99,6 +106,28 @@
             this.listPerson.UseCompatibleStateImageBehavior = false;
             this.listPerson.View = System.Windows.Forms.View.List;
             // 
+            // tableTags
+            // 
+            resources.ApplyResources(this.tableTags, "tableTags");
+            this.tableTags.Controls.Add(this.listTag, 0, 0);
+            this.tableTags.Controls.Add(this.pictureTagAdd, 1, 1);
+            this.tableTags.Controls.Add(this.pictureTagRemove, 1, 3);
+            this.tableTags.Name = "tableTags";
+            // 
+            // pictureTagAdd
+            // 
+            resources.ApplyResources(this.pictureTagAdd, "pictureTagAdd");
+            this.pictureTagAdd.Name = "pictureTagAdd";
+            this.pictureTagAdd.TabStop = false;
+            this.pictureTagAdd.Click += new System.EventHandler(this.pictureTagAddOnClick);
+            // 
+            // pictureTagRemove
+            // 
+            resources.ApplyResources(this.pictureTagRemove, "pictureTagRemove");
+            this.pictureTagRemove.Name = "pictureTagRemove";
+            this.pictureTagRemove.TabStop = false;
+            this.pictureTagRemove.Click += new System.EventHandler(this.pictureTagRemoveOnClick);
+            // 
             // CollapsibleInformation
             // 
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -111,6 +140,9 @@
             this.tabPageTag.ResumeLayout(false);
             this.tabPageExif.ResumeLayout(false);
             this.tabPagePerson.ResumeLayout(false);
+            this.tableTags.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTagAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTagRemove)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +156,8 @@
         private System.Windows.Forms.ListView listExif;
         private System.Windows.Forms.ListView listPerson;
         private System.Windows.Forms.ListView listTag;
+        private System.Windows.Forms.TableLayoutPanel tableTags;
+        private System.Windows.Forms.PictureBox pictureTagAdd;
+        private System.Windows.Forms.PictureBox pictureTagRemove;
     }
 }

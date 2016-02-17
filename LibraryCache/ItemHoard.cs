@@ -18,10 +18,12 @@ namespace Library.Cache
 
         #region Methods
 
-        internal override void Remove(string file)
+        public override bool Remove(string file)
         {
-            base.Remove(file);
+            bool ans = base.Remove(file);
             ItemRemoved(new CacheEventAsyncArgs(file));
+
+            return ans;
         }
 
         internal IEnumerable<string> Search(string location) => Library.Keys.Where(i => i.StartsWith(location)).OrderBy(o => o);

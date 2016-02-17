@@ -8,7 +8,7 @@ namespace Library.Works
 {
     public static class Navigation
     {
-        #region Methods
+        #region Get and Get+-
 
         public static Item Get(string current) => CacheManager.Items[current];
 
@@ -24,22 +24,57 @@ namespace Library.Works
             return CacheManager.Items[res.Item1 > 0 ? res.Item1 - 1 : res.Item1];
         }
 
-        #endregion Methods
+        #endregion Get and Get+-
+
+        #region Methods
+
+        public static void Remove(string location, Kind kind, IEnumerable<object> list)
+        {
+            IEnumerable<Guid> listing = CacheManager.SearchIndex(location, kind);
+
+            switch (kind)
+            {
+                case Kind.Person:
+                    CacheManager.Persons.Remove(list as IEnumerable<Guid>);
+                    break;
+
+                case Kind.Timing:
+                    CacheManager.Timings.Remove(list as IEnumerable<Guid>);
+                    break;
+
+                case Kind.Tag:
+                    CacheManager.Tags.Remove(list as IEnumerable<Guid>);
+                    break;
+
+                default:
+                    break;
+            }
+        }
 
         public static void Set(string file, Kind kind, object oldObj, object newObj)
         {
             switch (kind)
             {
                 case Kind.Person:
-
-                    //TODO Set Person
-                    throw new NotImplementedException();
+                    if (oldObj == null)
+                    {
+                        CacheManager.Persons.Add(file, (Person)newObj);
+                    }
+                    else
+                    {
+                        CacheManager.Persons.Set(file, (Person)oldObj, (Person)newObj);
+                    }
                     break;
 
                 case Kind.Timing:
-
-                    //TODO Set Timing
-                    throw new NotImplementedException();
+                    if (oldObj == null)
+                    {
+                        CacheManager.Timings.Add(file, (Timing)newObj);
+                    }
+                    else
+                    {
+                        CacheManager.Timings.Set(file, (Timing)oldObj, (Timing)newObj);
+                    }
                     break;
 
                 case Kind.Tag:
@@ -57,6 +92,8 @@ namespace Library.Works
                     throw new NotSupportedException(nameof(kind) + " " + kind.ToString());
             }
         }
+
+        #endregion Methods
 
         #region GetAll
 

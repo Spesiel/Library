@@ -3,11 +3,7 @@ using Library.Resources.Objects;
 using Library.Works;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Library.Controls
@@ -26,7 +22,13 @@ namespace Library.Controls
         {
             InitializeComponent();
 
+            // Set navigation images
+            pictureTagAdd.Image = Assets.Add;
+            pictureTagRemove.Image = Assets.Remove;
+
             SetCollapsingParameters(Size, tabControl, true);
+
+            // If a file has been specified, try and load its informations from the database
             if (File != null)
             {
                 FillExif();
@@ -78,31 +80,62 @@ namespace Library.Controls
 
         #region Tags: Methods
 
-        private LabelEditEventArgs oldTag = null;
+        private string oldTag = null;
 
         private void listTagOnAfterLabelEdit(object sender, LabelEditEventArgs e)
         {
             // Item edition was cancelled and it has no text
-            if (e.CancelEdit && string.IsNullOrEmpty(listTag.Items[e.Item].Text))
+            if (e.CancelEdit &&
+                (string.IsNullOrEmpty(listTag.Items[e.Item].Text)
+                || string.IsNullOrWhiteSpace(listTag.Items[e.Item].Text)))
             {
                 listTag.Items.RemoveAt(e.Item);
             }
-
-            Navigation.Set(File, Kind.Tag, oldTag.Label, e.Label);
+            else if (oldTag != null)
+            {
+                Navigation.Set(File, Kind.Tag, oldTag, e.Label);
+            }
         }
 
-        private void listTagOnBeforeLabelEdit(object sender, LabelEditEventArgs e)
+        private void listTagOnKeyPress(object sender, KeyPressEventArgs e)
         {
-            // Copies the current item to temporary location
-            oldTag = e;
+            if (Keys.F2.Equals(e.KeyChar) && listTag.SelectedItems.Count > 0)
+            {
+                listTag.SelectedItems[0].BeginEdit();
+            }
         }
 
-        private void listTagOnDoubleClick(object sender, EventArgs e)
+        private void listTagOnMouseDown(object sender, MouseEventArgs e)
         {
-            var item = listTag.Items.Add(string.Empty);
-            item.BeginEdit();
+            // DoubleClicked && is an item?
+            if (e.Clicks == 2 && listTag.HitTest(e.Location).Item != null)
+            {
+                listTag.HitTest(e.Location).Item.BeginEdit();
+            }
+        }
+
+        private void pictureTagAddOnClick(object sender, EventArgs e)
+        {
+            //TODO Tag Add
+        }
+
+        private void pictureTagRemoveOnClick(object sender, EventArgs e)
+        {
+            List<string> toRemove = new List<string>();
+            foreach (var item in listTag.SelectedItems)
+            {
+                toRemove.Add((item as string));
+            }
+
+            if (toRemove.Count > 0)
+            {
+                Navigation.Remove(File, Kind.Tag, toRemove);
+            }
         }
 
         #endregion Tags: Methods
+
+        //TODO Persons: Methods
+        //TODO Take into account the timing
     }
 }

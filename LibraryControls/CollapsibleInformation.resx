@@ -117,18 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableTags.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="listTag.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="listTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>0, 0</value>
+  </data>
+  <data name="listTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="listTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 161</value>
+    <value>370, 137</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="listTag.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -139,10 +145,97 @@
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listTag.Parent" xml:space="preserve">
-    <value>tabPageTag</value>
+    <value>tableTags</value>
   </data>
   <data name="&gt;&gt;listTag.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="pictureTagAdd.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pictureTagAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 28</value>
+  </data>
+  <data name="pictureTagAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pictureTagAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureTagAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureTagAdd.Name" xml:space="preserve">
+    <value>pictureTagAdd</value>
+  </data>
+  <data name="&gt;&gt;pictureTagAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureTagAdd.Parent" xml:space="preserve">
+    <value>tableTags</value>
+  </data>
+  <data name="&gt;&gt;pictureTagAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureTagRemove.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pictureTagRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 76</value>
+  </data>
+  <data name="pictureTagRemove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pictureTagRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureTagRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureTagRemove.Name" xml:space="preserve">
+    <value>pictureTagRemove</value>
+  </data>
+  <data name="&gt;&gt;pictureTagRemove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureTagRemove.Parent" xml:space="preserve">
+    <value>tableTags</value>
+  </data>
+  <data name="&gt;&gt;pictureTagRemove.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableTags.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableTags.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="tableTags.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tableTags.RowCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tableTags.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 137</value>
+  </data>
+  <data name="tableTags.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tableTags.Name" xml:space="preserve">
+    <value>tableTags</value>
+  </data>
+  <data name="&gt;&gt;tableTags.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableTags.Parent" xml:space="preserve">
+    <value>tabPageTag</value>
+  </data>
+  <data name="&gt;&gt;tableTags.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableTags.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="listTag" Row="0" RowSpan="5" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="pictureTagAdd" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="pictureTagRemove" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,32" /&gt;&lt;Rows Styles="Percent,50,Absolute,32,Absolute,16,Absolute,32,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabPageTag.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -151,7 +244,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 167</value>
+    <value>408, 143</value>
   </data>
   <data name="tabPageTag.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -178,7 +271,7 @@
     <value>3, 3</value>
   </data>
   <data name="listExif.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 161</value>
+    <value>406, 141</value>
   </data>
   <data name="listExif.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -202,7 +295,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageExif.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 167</value>
+    <value>412, 147</value>
   </data>
   <data name="tabPageExif.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -229,7 +322,7 @@
     <value>0, 0</value>
   </data>
   <data name="listPerson.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 167</value>
+    <value>412, 147</value>
   </data>
   <data name="listPerson.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -250,7 +343,7 @@
     <value>4, 22</value>
   </data>
   <data name="tabPagePerson.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 167</value>
+    <value>412, 147</value>
   </data>
   <data name="tabPagePerson.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -277,7 +370,7 @@
     <value>0, 20</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 193</value>
+    <value>416, 169</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -298,7 +391,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 213</value>
+    <value>416, 189</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CollapsibleInformation</value>

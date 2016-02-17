@@ -62,10 +62,9 @@ namespace Library.Cache
 
         public IEnumerable<IArtifact> Get(IEnumerable<TKey> keys) => Library.Where(l => l.Key.Equals(keys.Any())).Select(i => i.Value as IArtifact);
 
-        internal virtual void Remove(TKey key)
-        {
-            Library.Remove(key);
-        }
+        public virtual bool Remove(TKey key) => Library.Remove(key);
+
+        public void Remove(IEnumerable<TKey> keys) => keys.AsParallel().ForAll(k => Library.Remove(k));
 
         #endregion Methods
 
