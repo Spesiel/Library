@@ -14,15 +14,9 @@ namespace Library.Resources.Objects
 
         #region Methods
 
-        public static bool operator !=(Timing timing1, Timing timing2)
-        {
-            return !timing1.Equals(timing2);
-        }
+        public static bool operator !=(Timing timing1, Timing timing2) => !timing1.Equals(timing2);
 
-        public static bool operator ==(Timing timing1, Timing timing2)
-        {
-            return timing1.Equals(timing2);
-        }
+        public static bool operator ==(Timing timing1, Timing timing2) => timing1.Equals(timing2);
 
         public override bool Equals(object obj)
         {
@@ -40,10 +34,7 @@ namespace Library.Resources.Objects
             return true;
         }
 
-        public override int GetHashCode()
-        {
-            return Date.GetHashCode() ^ Timer.GetHashCode();
-        }
+        public override int GetHashCode() => Date.GetHashCode() ^ Timer.GetHashCode();
 
         #endregion Methods
     }

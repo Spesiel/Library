@@ -10,13 +10,13 @@ namespace Library.Resources.Objects
     {
         #region Fields + Properties
 
-        public string Folder { get { return InitialDirectory + Path.DirectorySeparatorChar; } }
+        public string Folder => InitialDirectory + Path.DirectorySeparatorChar;
 
         [DataMember(Name = "Ignored")]
         public Collection<string> Ignored { get; internal set; }
 
         [DataMember(Name = "InitialDirectory")]
-        private string InitialDirectory { get; set; }
+        private string InitialDirectory { get; }
 
         #endregion Fields + Properties
 
@@ -32,10 +32,7 @@ namespace Library.Resources.Objects
 
         #region Methods
 
-        public string GetFile(string file)
-        {
-            return Folder + file;
-        }
+        public string GetFile(string file) => Folder + file;
 
         public void SetIgnored(IList<string> value)
         {

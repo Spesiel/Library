@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B855AF63-4585-4FCD-9B19-D67C0C9D8DF0}</ProjectGuid>
+    <ProjectGuid>{A13A3D2E-DF55-45B8-A29C-2A6EB35C4B53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Library.Resources</RootNamespace>
-    <AssemblyName>LibraryResources</AssemblyName>
+    <RootNamespace>Library.Controls</RootNamespace>
+    <AssemblyName>LibraryControls</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,57 +39,37 @@
     <AssemblyOriginatorKeyFile>Pénélope Blossom.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Penelope.Controls">
+      <HintPath>..\..\Resources\DLLs\Penelope.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Assets.resx</DependentUpon>
-    </Compile>
-    <Compile Include="AtRuntime.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Kind.cs" />
     <Compile Include="CLSCompliant.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Objects\Exif.cs" />
-    <Compile Include="Objects\IArtifact.cs" />
-    <Compile Include="Objects\Item.cs" />
-    <Compile Include="Objects\Person.cs" />
-    <Compile Include="Objects\Record.cs" />
-    <Compile Include="Objects\Timing.cs" />
-    <Compile Include="Properties.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Properties.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Objects\Settings.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Assets.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Assets.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Properties.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Pénélope Blossom.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryReference\LibraryResources.csproj">
+      <Project>{b855af63-4585-4fcd-9b19-d67c0c9d8df0}</Project>
+      <Name>LibraryResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryWorks\LibraryWorks.csproj">
+      <Project>{15586ddb-c371-497d-bc3e-4a39b1872e40}</Project>
+      <Name>LibraryWorks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

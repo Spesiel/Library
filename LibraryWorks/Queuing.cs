@@ -10,7 +10,7 @@ namespace Library.Works
     {
         #region Fields + Properties
 
-        public static BackgroundWorker BackgroundWorker { get { return _Worker; } }
+        public static BackgroundWorker BackgroundWorker => _Worker;
         private static FirstInFirstOut<string> _Queue = new FirstInFirstOut<string>();
         private static BackgroundWorker _Worker = new BackgroundWorker();
 
@@ -20,7 +20,8 @@ namespace Library.Works
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
             "CA1810:InitializeReferenceTypeStaticFieldsInline",
-            Justification = "We need the queue to be initialized with several events. Pretty much it should work on its own out of the box.")]
+            Justification =
+            "Necessary in this situation, as we want the events to be initialized right off the bat")]
         static Queuing()
         {
             _Queue.Added += (s, args) =>
