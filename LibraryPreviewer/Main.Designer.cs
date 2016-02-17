@@ -29,25 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.Informations = new Library.Controls.CollapsibleInformation();
             this.table = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.picturePrevious = new System.Windows.Forms.PictureBox();
+            this.pictureNext = new System.Windows.Forms.PictureBox();
+            this.Informations = new Library.Controls.CollapsibleInformation();
             this.table.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNext)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Informations
-            // 
-            this.Informations.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.Informations, "Informations");
-            this.Informations.File = null;
-            this.Informations.Name = "Informations";
-            this.Informations.Title = "Informations";
             // 
             // table
             // 
             resources.ApplyResources(this.table, "table");
             this.table.Controls.Add(this.pictureBox, 1, 0);
+            this.table.Controls.Add(this.picturePrevious, 0, 1);
+            this.table.Controls.Add(this.pictureNext, 2, 1);
             this.table.Name = "table";
             // 
             // pictureBox
@@ -56,6 +54,26 @@
             this.pictureBox.Name = "pictureBox";
             this.table.SetRowSpan(this.pictureBox, 3);
             this.pictureBox.TabStop = false;
+            // 
+            // picturePrevious
+            // 
+            resources.ApplyResources(this.picturePrevious, "picturePrevious");
+            this.picturePrevious.Name = "picturePrevious";
+            this.picturePrevious.TabStop = false;
+            // 
+            // pictureNext
+            // 
+            resources.ApplyResources(this.pictureNext, "pictureNext");
+            this.pictureNext.Name = "pictureNext";
+            this.pictureNext.TabStop = false;
+            // 
+            // Informations
+            // 
+            this.Informations.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.Informations, "Informations");
+            this.Informations.File = null;
+            this.Informations.Name = "Informations";
+            this.Informations.Title = "Informations";
             // 
             // Main
             // 
@@ -67,6 +85,8 @@
             this.Name = "Main";
             this.table.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureNext)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,6 +96,8 @@
         private Controls.CollapsibleInformation Informations;
         private System.Windows.Forms.TableLayoutPanel table;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.PictureBox picturePrevious;
+        private System.Windows.Forms.PictureBox pictureNext;
     }
 }
 

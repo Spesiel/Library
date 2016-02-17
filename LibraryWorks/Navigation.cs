@@ -26,6 +26,38 @@ namespace Library.Works
 
         #endregion Methods
 
+        public static void Set(string file, Kind kind, object oldObj, object newObj)
+        {
+            switch (kind)
+            {
+                case Kind.Person:
+
+                    //TODO Set Person
+                    throw new NotImplementedException();
+                    break;
+
+                case Kind.Timing:
+
+                    //TODO Set Timing
+                    throw new NotImplementedException();
+                    break;
+
+                case Kind.Tag:
+                    if (oldObj == null)
+                    {
+                        CacheManager.Tags.Add(file, newObj as string);
+                    }
+                    else
+                    {
+                        CacheManager.Tags.Set(file, oldObj as string, newObj as string);
+                    }
+                    break;
+
+                default:
+                    throw new NotSupportedException(nameof(kind) + " " + kind.ToString());
+            }
+        }
+
         #region GetAll
 
         public static IList<Person> GetAllPersons(string current) => GetAll(current, Kind.Person).ConvertAll(i => (Person)i);

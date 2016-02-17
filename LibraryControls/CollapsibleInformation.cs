@@ -1,4 +1,5 @@
-﻿using Library.Resources.Objects;
+﻿using Library.Resources;
+using Library.Resources.Objects;
 using Library.Works;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,10 @@ namespace Library.Controls
                 FillTags();
             }
         }
+
+        #endregion Constructors
+
+        #region FillSth Methods
 
         private void FillExif()
         {
@@ -69,6 +74,35 @@ namespace Library.Controls
             }
         }
 
-        #endregion Constructors
+        #endregion FillSth Methods
+
+        #region Tags: Methods
+
+        private LabelEditEventArgs oldTag = null;
+
+        private void listTagOnAfterLabelEdit(object sender, LabelEditEventArgs e)
+        {
+            // Item edition was cancelled and it has no text
+            if (e.CancelEdit && string.IsNullOrEmpty(listTag.Items[e.Item].Text))
+            {
+                listTag.Items.RemoveAt(e.Item);
+            }
+
+            Navigation.Set(File, Kind.Tag, oldTag.Label, e.Label);
+        }
+
+        private void listTagOnBeforeLabelEdit(object sender, LabelEditEventArgs e)
+        {
+            // Copies the current item to temporary location
+            oldTag = e;
+        }
+
+        private void listTagOnDoubleClick(object sender, EventArgs e)
+        {
+            var item = listTag.Items.Add(string.Empty);
+            item.BeginEdit();
+        }
+
+        #endregion Tags: Methods
     }
 }

@@ -126,7 +126,7 @@
     <value>3, 3</value>
   </data>
   <data name="listTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 173</value>
+    <value>426, 161</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="listTag.TabIndex" type="System.Int32, mscorlib">
@@ -136,7 +136,7 @@
     <value>listTag</value>
   </data>
   <data name="&gt;&gt;listTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listTag.Parent" xml:space="preserve">
     <value>tabPageTag</value>
@@ -151,7 +151,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 179</value>
+    <value>432, 167</value>
   </data>
   <data name="tabPageTag.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -178,7 +178,7 @@
     <value>3, 3</value>
   </data>
   <data name="listExif.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 173</value>
+    <value>426, 161</value>
   </data>
   <data name="listExif.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -187,7 +187,7 @@
     <value>listExif</value>
   </data>
   <data name="&gt;&gt;listExif.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listExif.Parent" xml:space="preserve">
     <value>tabPageExif</value>
@@ -202,7 +202,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageExif.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 179</value>
+    <value>432, 167</value>
   </data>
   <data name="tabPageExif.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -229,7 +229,7 @@
     <value>0, 0</value>
   </data>
   <data name="listPerson.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 179</value>
+    <value>432, 167</value>
   </data>
   <data name="listPerson.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -238,7 +238,7 @@
     <value>listPerson</value>
   </data>
   <data name="&gt;&gt;listPerson.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listPerson.Parent" xml:space="preserve">
     <value>tabPagePerson</value>
@@ -250,13 +250,13 @@
     <value>4, 22</value>
   </data>
   <data name="tabPagePerson.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 179</value>
+    <value>432, 167</value>
   </data>
   <data name="tabPagePerson.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tabPagePerson.Text" xml:space="preserve">
-    <value>Persons</value>
+    <value>Person</value>
   </data>
   <data name="&gt;&gt;tabPagePerson.Name" xml:space="preserve">
     <value>tabPagePerson</value>
@@ -277,7 +277,7 @@
     <value>0, 20</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>452, 205</value>
+    <value>440, 193</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -298,7 +298,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>452, 225</value>
+    <value>440, 213</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CollapsibleInformation</value>

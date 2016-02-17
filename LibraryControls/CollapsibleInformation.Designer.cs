@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollapsibleInformation));
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPageExif = new System.Windows.Forms.TabPage();
             this.tabPageTag = new System.Windows.Forms.TabPage();
+            this.listTag = new System.Windows.Forms.ListView();
+            this.tabPageExif = new System.Windows.Forms.TabPage();
+            this.listExif = new System.Windows.Forms.ListView();
             this.tabPagePerson = new System.Windows.Forms.TabPage();
-            this.listExif = new System.Windows.Forms.ListBox();
-            this.listPerson = new System.Windows.Forms.ListBox();
-            this.listTag = new System.Windows.Forms.ListBox();
+            this.listPerson = new System.Windows.Forms.ListView();
             this.tabControl.SuspendLayout();
-            this.tabPageExif.SuspendLayout();
             this.tabPageTag.SuspendLayout();
+            this.tabPageExif.SuspendLayout();
             this.tabPagePerson.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,24 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             // 
+            // tabPageTag
+            // 
+            this.tabPageTag.Controls.Add(this.listTag);
+            resources.ApplyResources(this.tabPageTag, "tabPageTag");
+            this.tabPageTag.Name = "tabPageTag";
+            this.tabPageTag.UseVisualStyleBackColor = true;
+            // 
+            // listTag
+            // 
+            resources.ApplyResources(this.listTag, "listTag");
+            this.listTag.LabelEdit = true;
+            this.listTag.Name = "listTag";
+            this.listTag.UseCompatibleStateImageBehavior = false;
+            this.listTag.View = System.Windows.Forms.View.List;
+            this.listTag.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listTagOnAfterLabelEdit);
+            this.listTag.BeforeLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listTagOnBeforeLabelEdit);
+            this.listTag.DoubleClick += new System.EventHandler(this.listTagOnDoubleClick);
+            // 
             // tabPageExif
             // 
             this.tabPageExif.Controls.Add(this.listExif);
@@ -58,12 +76,13 @@
             this.tabPageExif.Name = "tabPageExif";
             this.tabPageExif.UseVisualStyleBackColor = true;
             // 
-            // tabPageTag
+            // listExif
             // 
-            this.tabPageTag.Controls.Add(this.listTag);
-            resources.ApplyResources(this.tabPageTag, "tabPageTag");
-            this.tabPageTag.Name = "tabPageTag";
-            this.tabPageTag.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.listExif, "listExif");
+            this.listExif.LabelEdit = true;
+            this.listExif.Name = "listExif";
+            this.listExif.UseCompatibleStateImageBehavior = false;
+            this.listExif.View = System.Windows.Forms.View.List;
             // 
             // tabPagePerson
             // 
@@ -72,26 +91,13 @@
             this.tabPagePerson.Name = "tabPagePerson";
             this.tabPagePerson.UseVisualStyleBackColor = true;
             // 
-            // listExif
-            // 
-            resources.ApplyResources(this.listExif, "listExif");
-            this.listExif.FormattingEnabled = true;
-            this.listExif.MultiColumn = true;
-            this.listExif.Name = "listExif";
-            this.listExif.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listExif.Sorted = true;
-            // 
             // listPerson
             // 
             resources.ApplyResources(this.listPerson, "listPerson");
-            this.listPerson.FormattingEnabled = true;
+            this.listPerson.LabelEdit = true;
             this.listPerson.Name = "listPerson";
-            // 
-            // listTag
-            // 
-            resources.ApplyResources(this.listTag, "listTag");
-            this.listTag.FormattingEnabled = true;
-            this.listTag.Name = "listTag";
+            this.listPerson.UseCompatibleStateImageBehavior = false;
+            this.listPerson.View = System.Windows.Forms.View.List;
             // 
             // CollapsibleInformation
             // 
@@ -102,8 +108,8 @@
             this.Title = "Informations";
             this.Controls.SetChildIndex(this.tabControl, 0);
             this.tabControl.ResumeLayout(false);
-            this.tabPageExif.ResumeLayout(false);
             this.tabPageTag.ResumeLayout(false);
+            this.tabPageExif.ResumeLayout(false);
             this.tabPagePerson.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -115,8 +121,8 @@
         private System.Windows.Forms.TabPage tabPageExif;
         private System.Windows.Forms.TabPage tabPageTag;
         private System.Windows.Forms.TabPage tabPagePerson;
-        private System.Windows.Forms.ListBox listExif;
-        private System.Windows.Forms.ListBox listPerson;
-        private System.Windows.Forms.ListBox listTag;
+        private System.Windows.Forms.ListView listExif;
+        private System.Windows.Forms.ListView listPerson;
+        private System.Windows.Forms.ListView listTag;
     }
 }

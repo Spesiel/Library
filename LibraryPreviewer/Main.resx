@@ -117,50 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Informations.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Informations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 541</value>
-  </data>
-  <data name="Informations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 20</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Informations.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Informations.Name" xml:space="preserve">
-    <value>Informations</value>
-  </data>
-  <data name="&gt;&gt;Informations.Type" xml:space="preserve">
-    <value>Library.Controls.CollapsibleInformation, LibraryControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f6bc0749e9e48d</value>
-  </data>
-  <data name="&gt;&gt;Informations.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Informations.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="table.CellBorderStyle" type="System.Windows.Forms.TableLayoutPanelCellBorderStyle, System.Windows.Forms">
-    <value>Single</value>
-  </data>
   <data name="table.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="pictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 1</value>
+    <value>32, 0</value>
   </data>
   <data name="pictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="pictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 539</value>
+    <value>720, 541</value>
   </data>
   <data name="pictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -179,6 +155,78 @@
   </data>
   <data name="&gt;&gt;pictureBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="picturePrevious.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="picturePrevious.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picturePrevious.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 254</value>
+  </data>
+  <data name="picturePrevious.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="picturePrevious.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="picturePrevious.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="picturePrevious.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="picturePrevious.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;picturePrevious.Name" xml:space="preserve">
+    <value>picturePrevious</value>
+  </data>
+  <data name="&gt;&gt;picturePrevious.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picturePrevious.Parent" xml:space="preserve">
+    <value>table</value>
+  </data>
+  <data name="&gt;&gt;picturePrevious.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureNext.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pictureNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>752, 254</value>
+  </data>
+  <data name="pictureNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pictureNext.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureNext.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureNext.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureNext.Name" xml:space="preserve">
+    <value>pictureNext</value>
+  </data>
+  <data name="&gt;&gt;pictureNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureNext.Parent" xml:space="preserve">
+    <value>table</value>
+  </data>
+  <data name="&gt;&gt;pictureNext.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="table.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -211,7 +259,31 @@
     <value>0</value>
   </data>
   <data name="table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="pictureBox" Row="0" RowSpan="3" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,48,Percent,100,Absolute,48" /&gt;&lt;Rows Styles="Percent,50,Absolute,48,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="pictureBox" Row="0" RowSpan="3" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="picturePrevious" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="pictureNext" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,32,Percent,100,Absolute,32" /&gt;&lt;Rows Styles="Percent,50,Absolute,32,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="Informations.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="Informations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 541</value>
+  </data>
+  <data name="Informations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 20</value>
+  </data>
+  <data name="Informations.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Informations.Name" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="&gt;&gt;Informations.Type" xml:space="preserve">
+    <value>Library.Controls.CollapsibleInformation, LibraryControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f6bc0749e9e48d</value>
+  </data>
+  <data name="&gt;&gt;Informations.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Informations.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -221,6 +293,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>784, 561</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>640, 480</value>

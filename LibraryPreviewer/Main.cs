@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace Library.Previewer
         public Main(string[] args)
         {
             InitializeComponent();
+
+            // Set navigation images
+            picturePrevious.Image = Assets.ArrowLeft;
+            pictureNext.Image = Assets.ArrowRight;
 
             // One argument, checking if it's a file the application can load
             if (args.Length == 1 && (

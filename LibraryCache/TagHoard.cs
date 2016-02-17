@@ -23,6 +23,11 @@ namespace Library.Cache
             TagAdded(new CacheEventAsyncArgs(file, guid));
         }
 
+        public void Set(string file, string oldTag, string newTag)
+        {
+            Library[Library.First(i => i.Value.Equals(oldTag)).Key] = newTag;
+        }
+
         #endregion Methods
 
         #region Constructors
