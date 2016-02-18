@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryPreviewer", "Library
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryControls", "LibraryControls\LibraryControls.csproj", "{A13A3D2E-DF55-45B8-A29C-2A6EB35C4B53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryViewer", "LibraryViewer\LibraryViewer.csproj", "{C2F341EA-5DEC-45CA-96D6-95181EFFEC7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A13A3D2E-DF55-45B8-A29C-2A6EB35C4B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A13A3D2E-DF55-45B8-A29C-2A6EB35C4B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A13A3D2E-DF55-45B8-A29C-2A6EB35C4B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F341EA-5DEC-45CA-96D6-95181EFFEC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F341EA-5DEC-45CA-96D6-95181EFFEC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F341EA-5DEC-45CA-96D6-95181EFFEC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F341EA-5DEC-45CA-96D6-95181EFFEC7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
