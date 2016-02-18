@@ -61,11 +61,20 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add new tags.
+        ///   Looks up a localized string similar to Add new .
         /// </summary>
-        public static string AddTag {
+        public static string AddNew {
             get {
-                return ResourceManager.GetString("AddTag", resourceCulture);
+                return ResourceManager.GetString("AddNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add new .
+        /// </summary>
+        public static string AddNewF {
+            get {
+                return ResourceManager.GetString("AddNewF", resourceCulture);
             }
         }
         
@@ -84,6 +93,24 @@ namespace Library.Resources {
         public static string OK {
             get {
                 return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to persons.
+        /// </summary>
+        public static string Persons {
+            get {
+                return ResourceManager.GetString("Persons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to tags.
+        /// </summary>
+        public static string Tags {
+            get {
+                return ResourceManager.GetString("Tags", resourceCulture);
             }
         }
     }

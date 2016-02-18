@@ -123,7 +123,16 @@
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="AddTag" xml:space="preserve">
-    <value>Add new tags</value>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add new </value>
+  </data>
+  <data name="AddNewF" xml:space="preserve">
+    <value>Add new </value>
+  </data>
+  <data name="Persons" xml:space="preserve">
+    <value>persons</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>tags</value>
   </data>
 </root>
