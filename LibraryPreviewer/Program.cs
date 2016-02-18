@@ -15,7 +15,7 @@ namespace Library.Previewer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main(args));
+            Application.Run(new Preview(args));
         }
 
         #endregion Methods

@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace Library.Previewer
 {
-    public partial class Main : Form
+    public partial class Preview : Form
     {
         #region Constructors
 
-        public Main(string[] args)
+        public Preview(string[] args)
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace Library.Previewer
             }
         }
 
-        internal Main()
+        internal Preview()
         {
             InitializeComponent();
         }
