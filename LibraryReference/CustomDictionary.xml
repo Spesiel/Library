@@ -24,6 +24,9 @@
       <Word>Subsec</Word>
       <Word>Ver</Word>
       <Word>Dop</Word>
+      <!-- Specifics -->
+      <Word>Pénélope</Word>
+      <Word>Informations</Word>
     </Recognized>
     <Deprecated>
       <!--Term PreferredAlternate=""></Term-->

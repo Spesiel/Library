@@ -19,9 +19,9 @@ namespace Library.Previewer
 
             // One argument, checking if it's a file the application can load
             if (args.Length == 1 && (
-                Resources.Constants.
+                Constants.
                     AllowedExtensionsImages.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))
-                || Resources.Constants.
+                || Constants.
                     AllowedExtensionsVideos.Any(e => args[0].EndsWith(e, StringComparison.OrdinalIgnoreCase))
                 ) && System.IO.File.Exists(args[0]))
             {

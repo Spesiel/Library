@@ -112,4 +112,7 @@
   <data name="MenuFile" xml:space="preserve">
     <value>&amp;File</value>
   </data>
+  <data name="MenuHelpLanguage" xml:space="preserve">
+    <value>&amp;Language</value>
+  </data>
 </root>

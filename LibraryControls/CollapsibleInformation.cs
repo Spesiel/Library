@@ -1,6 +1,7 @@
 ﻿using Library.Resources;
 using Library.Resources.Objects;
 using Library.Works;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -29,6 +30,18 @@ namespace Library.Controls
                 flowPersons.Insert(FillPersons());
                 FillExif();
             }
+
+            SetTexts();
+            LanguageChoice.LanguageChanged += (s, e) => SetTexts();
+        }
+
+        //TOFIX Texts
+        private void SetTexts()
+        {
+            Title = Texts.InformationPlural;
+            tabPageExif.Text = Texts.Exif;
+            tabPageTag.Text = Texts.Tags;
+            tabPagePerson.Text = Texts.Persons;
         }
 
         #endregion Constructors

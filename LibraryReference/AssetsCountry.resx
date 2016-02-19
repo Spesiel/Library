@@ -117,34 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cancel" xml:space="preserve">
-    <value>Annuler</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="fr" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAIAAACeBPOyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAqklEQVQ4T2OYNu3AlCn729q2
+        oaLNFy8+/o8V3Lz5v60NHaWn/+fjY0hMXBAZOdvBoQcVtW3bdgWqGQ0cOvTfwQEdCQouZ2BgsLXtVlKq
+        YmBIQ0Vx8+YdhWpGA+vW/WdgQEMXGRjKRs2CakYDo2YNe7OEhQsZGCIYGDxQkVNBQfcWrKC6egsDAxqa
+        wsAQCTSLgcGFgUGRgUEKFUloaBg6YAU6Og4MDFgQAwMAEukbQ+KTA4YAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="OK" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="AddNew" xml:space="preserve">
-    <value>Ajouter de nouveaux </value>
-  </data>
-  <data name="AddNewF" xml:space="preserve">
-    <value>Ajouter de nouvelles </value>
-  </data>
-  <data name="Persons" xml:space="preserve">
-    <value>Personnes</value>
-  </data>
-  <data name="Tags" xml:space="preserve">
-    <value>Tags</value>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version </value>
-  </data>
-  <data name="InformationPlural" xml:space="preserve">
-    <value>Informations</value>
-  </data>
-  <data name="Exif" xml:space="preserve">
-    <value>EXIF</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Langue</value>
+  <data name="us" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAM0SURBVDhPtdFfbNNVFMDxO40PPhh8Vl8UHkg0JD6Y
+        aEpYMCMxvIiMrTOMKdtatzk66PoHUaFlVhmuOoK6zZmBiNuvpS10gHMMCu0sWBZY1JKtLItLTFS2C9l0
+        Xbu2+PV28cmk00T8JZ+c3Ht/Oeeec0V4aCJxJfzjrE/7QZ4/Oy6DvhsyfO6m7Dv+vQwNjMsTWlwOD45L
+        rTcuByPTcvrwexK3S2baXTL7DzK7amdTq1YkxBefXk0Nnxql97MYPR9GONEdpbfrMqH+OMHOMMc+idLl
+        HuZrbQR/d4ypc5fgRoTs6BVyo5cLux4lG/4Kr8OeEm3O0IzLcQlzjY+67QH2NQbocAxgqjmJYVsAq8HP
+        /p1BzMYgLxm+YeLlF2H7GtJVa1ms0hVW+SyxjU9hffKRGdHy5pDcZz6L3Rhg2+Y+LLWq2FaPStyv1seX
+        ilTrPbgs/ax73sPkwVbo2UPqIyfpjx0FJQ/vJWo30rxBJ4Xr7ZD8/FAYS40fp1HjrcaTvGE6g9MUxFXX
+        S2N1viM/Laobm/4Yk1cTcFeCvAW3C8tN/8zIhUHsTTukaHddlB0HQrym12h4NcD7Ji/vqlu3mz0YqgI0
+        VGq0qBEeavZRvvMa19esgscFt1YWMbNSFPSrMvSYwPSwkOKdveelwzqobh6gslTDsUONrcLPB7vPUF3W
+        h/P1AFUVHty7T1OsO8JUmqUvq+SWsZjLERsZwWa3S7HfNiC7HKfZ8FwnDaVHqSjpXhrTC7pOTGVH2bhW
+        7W8+wqaSHmzNEaIPCCgSLNwvSC8jqUTvE1iKVCffxeelmjA3VfnJP2Bcxam7Kqqr5tcTSj4m1P6Y+i+Z
+        VIe/zZFNpsjOF5aem+fbSBSruVmKO3vqJI5XwLgeaovBoBSK1ev4vX4Tsr6c2/Vly5qu28KFLSU0Pb1a
+        ilSHS/Klm4zbSqbNsiT7V/y7rNtCrs38rywe3EWsaSu29c+oTq7F89Mit5Aml7p3MskFYtGoekeL6qRU
+        N7Ow+gnm1SPNqse6F+aUO0pY5TQXiRnx0y+kxsbG8Pp8eLxeNI/nP8vn6dM0DrS2Uq7Xp4T2qEiUPiRm
+        ix8U8n+g8orEnwUSDVBoJgzmAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

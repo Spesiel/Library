@@ -56,6 +56,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Assets.resx</DependentUpon>
     </Compile>
+    <Compile Include="AssetsCountry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetsCountry.resx</DependentUpon>
+    </Compile>
     <Compile Include="AtRuntime.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Kind.cs" />
@@ -104,6 +109,10 @@
     <EmbeddedResource Include="Assets.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Assets.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsCountry.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AssetsCountry.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.resx">
       <Generator>ResXFileCodeGenerator</Generator>

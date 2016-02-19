@@ -22,14 +22,14 @@ namespace Library.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class TextsMenu {
+    public class AssetsCountry {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TextsMenu() {
+        internal AssetsCountry() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Library.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Library.Resources.TextsMenu", typeof(TextsMenu).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Library.Resources.AssetsCountry", typeof(AssetsCountry).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,56 +61,22 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;File.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static string MenuFile {
+        public static System.Drawing.Bitmap fr {
             get {
-                return ResourceManager.GetString("MenuFile", resourceCulture);
+                object obj = ResourceManager.GetObject("fr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;Load Directory.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static string MenuFileLoad {
+        public static System.Drawing.Bitmap us {
             get {
-                return ResourceManager.GetString("MenuFileLoad", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Open Library.
-        /// </summary>
-        public static string MenuFileOpen {
-            get {
-                return ResourceManager.GetString("MenuFileOpen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;?.
-        /// </summary>
-        public static string MenuHelp {
-            get {
-                return ResourceManager.GetString("MenuHelp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;About Library.
-        /// </summary>
-        public static string MenuHelpAbout {
-            get {
-                return ResourceManager.GetString("MenuHelpAbout", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &amp;Language.
-        /// </summary>
-        public static string MenuHelpLanguage {
-            get {
-                return ResourceManager.GetString("MenuHelpLanguage", resourceCulture);
+                object obj = ResourceManager.GetObject("us", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

@@ -130,15 +130,24 @@
     <value>Add new </value>
   </data>
   <data name="Persons" xml:space="preserve">
-    <value>persons</value>
+    <value>Persons</value>
   </data>
   <data name="Tags" xml:space="preserve">
-    <value>tags</value>
+    <value>Tags</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Version </value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>//TODO Description</value>
+  </data>
+  <data name="InformationPlural" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="Exif" xml:space="preserve">
+    <value>EXIF</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
   </data>
 </root>

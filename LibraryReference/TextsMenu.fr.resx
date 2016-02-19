@@ -132,4 +132,7 @@
   <data name="MenuHelpAbout" xml:space="preserve">
     <value>&amp;A propos de Library</value>
   </data>
+  <data name="MenuHelpLanguage" xml:space="preserve">
+    <value>&amp;Langue</value>
+  </data>
 </root>

@@ -97,6 +97,33 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EXIF.
+        /// </summary>
+        public static string Exif {
+            get {
+                return ResourceManager.GetString("Exif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informations.
+        /// </summary>
+        public static string InformationPlural {
+            get {
+                return ResourceManager.GetString("InformationPlural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OK {
@@ -106,7 +133,7 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to persons.
+        ///   Looks up a localized string similar to Persons.
         /// </summary>
         public static string Persons {
             get {
@@ -115,7 +142,7 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to tags.
+        ///   Looks up a localized string similar to Tags.
         /// </summary>
         public static string Tags {
             get {

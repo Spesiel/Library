@@ -1,5 +1,6 @@
 ﻿using Library.Controls;
 using Library.Resources;
+using System;
 using System.Windows.Forms;
 
 namespace LibraryViewer
@@ -12,17 +13,25 @@ namespace LibraryViewer
         {
             InitializeComponent();
 
-            //TOFIX Menu strip images
+            // Menu strip images
             //// File
             menuStripFileOpen.Image = Assets.FolderOpen;
             menuStripFileLoad.Image = Assets.FolderLoad;
 
-            //TOFIX Menu strip texts
-            //// File
+            SetTexts();
+
+            LanguageChoice.LanguageChanged += (s, e) => SetTexts();
+        }
+
+        //TOFIX Texts
+        private void SetTexts()
+        {
+            // File
             fileToolStripMenuItem.Text = TextsMenu.MenuFile;
             menuStripFileOpen.Text = TextsMenu.MenuFileOpen;
             menuStripFileLoad.Text = TextsMenu.MenuFileLoad;
-            //// ? (help)
+
+            // ? (help)
             helpToolStripMenuItem.Text = TextsMenu.MenuHelp;
             aboutToolStripMenuItem.Text = TextsMenu.MenuHelpAbout;
         }
@@ -40,5 +49,17 @@ namespace LibraryViewer
         }
 
         #endregion Menu Help About
+
+        #region Methods
+
+        private void languageToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            using (LanguageChoice language = new LanguageChoice())
+            {
+                if (language.ShowDialog() == DialogResult.None) language.Hide();
+            }
+        }
+
+        #endregion Methods
     }
 }
