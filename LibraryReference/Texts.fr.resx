@@ -135,4 +135,7 @@
   <data name="Tags" xml:space="preserve">
     <value>tags</value>
   </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version </value>
+  </data>
 </root>

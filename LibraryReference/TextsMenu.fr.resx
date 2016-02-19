@@ -117,28 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="MenuFile" xml:space="preserve">
+    <value>&amp;Fichier</value>
   </data>
-  <data name="OK" xml:space="preserve">
-    <value>OK</value>
+  <data name="MenuFileLoad" xml:space="preserve">
+    <value>&amp;Charger un dossier</value>
   </data>
-  <data name="AddNew" xml:space="preserve">
-    <value>Add new </value>
+  <data name="MenuFileOpen" xml:space="preserve">
+    <value>&amp;Ouvrir la librairie</value>
   </data>
-  <data name="AddNewF" xml:space="preserve">
-    <value>Add new </value>
+  <data name="MenuHelp" xml:space="preserve">
+    <value>&amp;?</value>
   </data>
-  <data name="Persons" xml:space="preserve">
-    <value>persons</value>
-  </data>
-  <data name="Tags" xml:space="preserve">
-    <value>tags</value>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version </value>
-  </data>
-  <data name="Description" xml:space="preserve">
-    <value>//TODO Description</value>
+  <data name="MenuHelpAbout" xml:space="preserve">
+    <value>&amp;A propos de Library</value>
   </data>
 </root>

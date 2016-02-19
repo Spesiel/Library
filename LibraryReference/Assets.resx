@@ -146,6 +146,31 @@
         YII=
 </value>
   </data>
+  <data name="FolderLoad" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH3gEZCCMgf0XgSwAAAMJJREFU
+        WEftjuEKwzAIhPvW+ZlH73RBuEiWzKpNB/vggnie8Tg38z9g/wEEP0tlQbvHH2plQbvnH4gfLYHqvqER
+        P1oC1X1DI36iWvEJGMxSK+7m9w+ABd68e4E3717gzbsXePO2BaUUDHdi71sg1woLtVZc8Bb3LEC2FVbw
+        COvnjGRJ1w5g+OMrnzMhB3h4/gEwECINeMuBEGnAmw9opG+VBrz5gEb6VmnAWw6ESAPeciBEGvDGA9k8
+        74CNGjZv0nG+AHsELTLqMETwAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="FolderOpen" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH3gEZCCMgf0XgSwAAAd5JREFU
+        WEftVU3LAVEUtvC18ZXyD9hIImIjC/9CNiLy42xEpMjCwsJKSMiPYGHnvPecuXcyzAxdM6bePPVMp/P5
+        3Jl777jAYfwEOC+AAR8vaRdYb/2Bj7QLrLf5ABG3mgLM1joeIeJWU4DZWscjRNxGKoYR7hLtomJ8Gz8B
+        /1PAaDSCer0O8XgcotEoxGIxSKVS0Gw2YTqdwu1245kWC1iv11AsFu+b6rJSqcDxeKSaO79iyGI2m0Eo
+        FKIefr8fOp0OvYndbkccDofQbrfB5/NRTiQSgeVyKYYj5QXggHA4TPWFQgFOpxOPPANXns/nKRdFiLmM
+        8gJKpRLV4vDr9cq9CvT6Yk4ul1NjnHICxuMx1eFr11u5Ud/9fg9er1eNM8oJaDQaVNdqtbjnfeBJEXMZ
+        5QQkEgmq6/V63PM+ut3u5wICgQDVbTYb7tHCrO9qtVLjjJ8J2G633KOFWV+8N0ScUU5AMpmkOqNPYNbX
+        kk+A1yvWGW1Cs76WbMLJZEJ1jh1D/LGUy2WqzWazcLlceESBXt/z+QzpdFqNccoJQOBVLDZjJpOBw+HA
+        I8/AlYvhll3FiPl8rorweDxQq9VgMBioP6N+vw/VahXcbjflBINBWCwWYjhSNZyirvNLdMEf4fHMp2+n
+        Fo8AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="Remove" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

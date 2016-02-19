@@ -117,28 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="Company" xml:space="preserve">
+    <value>Pénélope Blossom</value>
   </data>
-  <data name="OK" xml:space="preserve">
-    <value>OK</value>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright 2016</value>
   </data>
-  <data name="AddNew" xml:space="preserve">
-    <value>Add new </value>
-  </data>
-  <data name="AddNewF" xml:space="preserve">
-    <value>Add new </value>
-  </data>
-  <data name="Persons" xml:space="preserve">
-    <value>persons</value>
-  </data>
-  <data name="Tags" xml:space="preserve">
-    <value>tags</value>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version </value>
-  </data>
-  <data name="Description" xml:space="preserve">
-    <value>//TODO Description</value>
+  <data name="Name" xml:space="preserve">
+    <value>Library</value>
   </data>
 </root>

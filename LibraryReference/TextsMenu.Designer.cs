@@ -22,14 +22,14 @@ namespace Library.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Texts {
+    public class TextsMenu {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Texts() {
+        internal TextsMenu() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Library.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Library.Resources.Texts", typeof(Texts).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Library.Resources.TextsMenu", typeof(TextsMenu).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,47 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add new .
+        ///   Looks up a localized string similar to &amp;File.
         /// </summary>
-        public static string AddNew {
+        public static string MenuFile {
             get {
-                return ResourceManager.GetString("AddNew", resourceCulture);
+                return ResourceManager.GetString("MenuFile", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add new .
+        ///   Looks up a localized string similar to &amp;Load Directory.
         /// </summary>
-        public static string AddNewF {
+        public static string MenuFileLoad {
             get {
-                return ResourceManager.GetString("AddNewF", resourceCulture);
+                return ResourceManager.GetString("MenuFileLoad", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cancel.
+        ///   Looks up a localized string similar to &amp;Open Library.
         /// </summary>
-        public static string Cancel {
+        public static string MenuFileOpen {
             get {
-                return ResourceManager.GetString("Cancel", resourceCulture);
+                return ResourceManager.GetString("MenuFileOpen", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //TODO Description.
+        ///   Looks up a localized string similar to &amp;?.
         /// </summary>
-        public static string Description {
+        public static string MenuHelp {
             get {
-                return ResourceManager.GetString("Description", resourceCulture);
+                return ResourceManager.GetString("MenuHelp", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to OK.
+        ///   Looks up a localized string similar to &amp;About Library.
         /// </summary>
-        public static string OK {
+        public static string MenuHelpAbout {
             get {
-                return ResourceManager.GetString("OK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to persons.
-        /// </summary>
-        public static string Persons {
-            get {
-                return ResourceManager.GetString("Persons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to tags.
-        /// </summary>
-        public static string Tags {
-            get {
-                return ResourceManager.GetString("Tags", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Version .
-        /// </summary>
-        public static string Version {
-            get {
-                return ResourceManager.GetString("Version", resourceCulture);
+                return ResourceManager.GetString("MenuHelpAbout", resourceCulture);
             }
         }
     }
