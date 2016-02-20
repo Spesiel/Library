@@ -1,14 +1,21 @@
 ﻿using Library.Resources.Objects;
 using Library.Resources.TextResources;
+using System;
 using System.Windows.Forms;
 
 namespace Library.Controls
 {
     public partial class LayoutWait : UserControl
     {
+        #region Delegates + Events
+
+        public event EventHandler Done = delegate { };
+
+        #endregion Delegates + Events
+
         #region Fields + Properties
 
-        private Progression progression;
+        private Progression progression = new Progression();
 
         #endregion Fields + Properties
 
@@ -22,6 +29,8 @@ namespace Library.Controls
         public LayoutWait()
         {
             InitializeComponent();
+
+            progression.Completed += (s, e) => Done(this, null);
 
             SetTexts();
             LanguageChoice.LanguageChanged += (s, e) => SetTexts();

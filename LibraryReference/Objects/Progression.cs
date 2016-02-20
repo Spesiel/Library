@@ -1,43 +1,37 @@
 ﻿using Library.Resources.TextResources;
+using System;
 
 namespace Library.Resources.Objects
 {
-    public struct Progression : IArtifact
+    public class Progression : IArtifact
     {
+        #region Delegates + Events
+
+        public event EventHandler Completed = delegate { };
+
+        #endregion Delegates + Events
+
         #region Fields + Properties
 
-        public int Current { get; set; }
+        public int Current
+        {
+            get
+            {
+                return _Current;
+            }
+            set
+            {
+                _Current = value;
+                if (Percentage >= 100) Completed(this, null);
+            }
+        }
+
         public int Percentage => 100 * Current / Total;
         public string Progress => Current + TextsPermanent.CountSeparator + Total;
         public string ProgressPercentage => Percentage + TextsPermanent.PercentSign;
         public int Total { get; set; }
+        private int _Current;
 
         #endregion Fields + Properties
-
-        #region Methods
-
-        public static bool operator !=(Progression timing1, Progression timing2) => !timing1.Equals(timing2);
-
-        public static bool operator ==(Progression timing1, Progression timing2) => timing1.Equals(timing2);
-
-        public override bool Equals(object obj)
-        {
-            if (!(obj is Progression))
-                return false;
-
-            return Equals((Progression)obj);
-        }
-
-        public bool Equals(Progression other)
-        {
-            if (Current != other.Current || Total != other.Total)
-                return false;
-
-            return true;
-        }
-
-        public override int GetHashCode() => Current.GetHashCode() ^ Total.GetHashCode();
-
-        #endregion Methods
     }
 }

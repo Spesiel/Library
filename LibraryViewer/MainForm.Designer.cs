@@ -35,11 +35,14 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStripFileLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.statusStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.statusStripProgressLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.layout = new Library.Controls.LayoutMainForm();
-            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -83,6 +86,12 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            this.languageToolStripMenuItem.Click += new System.EventHandler(this.languageToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -91,20 +100,27 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripProgressBar,
+            this.statusStripProgressLabel});
             resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            // 
+            // statusStripProgressBar
+            // 
+            this.statusStripProgressBar.Name = "statusStripProgressBar";
+            resources.ApplyResources(this.statusStripProgressBar, "statusStripProgressBar");
+            // 
+            // statusStripProgressLabel
+            // 
+            this.statusStripProgressLabel.Name = "statusStripProgressLabel";
+            resources.ApplyResources(this.statusStripProgressLabel, "statusStripProgressLabel");
             // 
             // layout
             // 
             resources.ApplyResources(this.layout, "layout");
             this.layout.Name = "layout";
-            // 
-            // languageToolStripMenuItem
-            // 
-            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
-            this.languageToolStripMenuItem.Click += new System.EventHandler(this.languageToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -119,6 +135,8 @@
             this.Name = "MainForm";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +153,8 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private Library.Controls.LayoutMainForm layout;
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripProgressBar statusStripProgressBar;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripProgressLabel;
     }
 }
 
