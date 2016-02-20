@@ -51,10 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets.Designer.cs">
+    <Compile Include="AssetsImage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Assets.resx</DependentUpon>
+      <DependentUpon>AssetsImage.resx</DependentUpon>
     </Compile>
     <Compile Include="AssetsCountry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -79,36 +79,36 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Objects\Settings.cs" />
-    <Compile Include="Texts.Designer.cs">
+    <Compile Include="TextResources\Texts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Texts.resx</DependentUpon>
     </Compile>
-    <Compile Include="Texts.fr.Designer.cs">
+    <Compile Include="TextResources\Texts.fr.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Texts.fr.resx</DependentUpon>
     </Compile>
-    <Compile Include="TextsMenu.Designer.cs">
+    <Compile Include="TextResources\TextsMenu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TextsMenu.resx</DependentUpon>
     </Compile>
-    <Compile Include="TextsMenu.fr.Designer.cs">
+    <Compile Include="TextResources\TextsMenu.fr.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TextsMenu.fr.resx</DependentUpon>
     </Compile>
-    <Compile Include="TextsPermanent.Designer.cs">
+    <Compile Include="TextResources\TextsPermanent.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TextsPermanent.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Assets.resx">
+    <EmbeddedResource Include="AssetsImage.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Assets.Designer.cs</LastGenOutput>
+      <LastGenOutput>AssetsImage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AssetsCountry.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -118,23 +118,23 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Properties.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Texts.fr.resx">
+    <EmbeddedResource Include="TextResources\Texts.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Texts.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Texts.resx">
+    <EmbeddedResource Include="TextResources\Texts.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Texts.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextsMenu.fr.resx">
+    <EmbeddedResource Include="TextResources\TextsMenu.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TextsMenu.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextsMenu.resx">
+    <EmbeddedResource Include="TextResources\TextsMenu.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TextsMenu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextsPermanent.resx">
+    <EmbeddedResource Include="TextResources\TextsPermanent.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TextsPermanent.Designer.cs</LastGenOutput>
     </EmbeddedResource>

@@ -34,7 +34,11 @@ namespace Library.Resources
         /// The base path for all the files
         /// </summary>
         //TOFIX Change the base folder path
+#if DEBUG
         private static string BasePath => Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + Path.DirectorySeparatorChar;
+#else
+        private static string BasePath => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + TextResources.TextsPermanent.Name + Path.DirectorySeparatorChar;
+#endif
 
         #endregion Fields + Properties
 

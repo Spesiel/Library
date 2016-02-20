@@ -1,7 +1,7 @@
 ﻿using Library.Resources;
 using Library.Resources.Objects;
+using Library.Resources.TextResources;
 using Library.Works;
-using System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -68,7 +68,7 @@ namespace Library.Controls
             {
                 if (string.IsNullOrEmpty(p.DisplayName))
                 {
-                    ans.Add(p.FirstName + Assets.Space + p.LastName);
+                    ans.Add(p.FirstName + TextsPermanent.Space + p.LastName);
                 }
                 else
                 {

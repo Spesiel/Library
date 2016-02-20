@@ -14,8 +14,8 @@ namespace Library.Previewer
             InitializeComponent();
 
             // Set navigation images
-            picturePrevious.Image = Assets.ArrowLeft;
-            pictureNext.Image = Assets.ArrowRight;
+            picturePrevious.Image = AssetsImage.ArrowLeft;
+            pictureNext.Image = AssetsImage.ArrowRight;
 
             // One argument, checking if it's a file the application can load
             if (args.Length == 1 && (

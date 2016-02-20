@@ -1,10 +1,9 @@
 ﻿using Library.Resources;
+using Library.Resources.TextResources;
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Reflection;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Library.Controls

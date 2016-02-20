@@ -1,6 +1,6 @@
 ﻿using Library.Controls;
 using Library.Resources;
-using System;
+using Library.Resources.TextResources;
 using System.Windows.Forms;
 
 namespace LibraryViewer
@@ -15,8 +15,8 @@ namespace LibraryViewer
 
             // Menu strip images
             //// File
-            menuStripFileOpen.Image = Assets.FolderOpen;
-            menuStripFileLoad.Image = Assets.FolderLoad;
+            menuStripFileOpen.Image = AssetsImage.FolderOpen;
+            menuStripFileLoad.Image = AssetsImage.FolderLoad;
 
             SetTexts();
 

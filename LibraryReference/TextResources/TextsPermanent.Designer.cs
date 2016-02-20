@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library.Resources {
+namespace Library.Resources.TextResources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Library.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Assets {
+    public class TextsPermanent {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Assets() {
+        internal TextsPermanent() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Library.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Library.Resources.Assets", typeof(Assets).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Library.Resources.TextResources.TextsPermanent", typeof(TextsPermanent).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,62 +61,29 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Pénélope Blossom.
         /// </summary>
-        public static System.Drawing.Bitmap Add {
+        public static string Company {
             get {
-                object obj = ResourceManager.GetObject("Add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Company", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Copyright 2016.
         /// </summary>
-        public static System.Drawing.Bitmap ArrowLeft {
+        public static string Copyright {
             get {
-                object obj = ResourceManager.GetObject("ArrowLeft", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Copyright", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Library.
         /// </summary>
-        public static System.Drawing.Bitmap ArrowRight {
+        public static string Name {
             get {
-                object obj = ResourceManager.GetObject("ArrowRight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap FolderLoad {
-            get {
-                object obj = ResourceManager.GetObject("FolderLoad", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap FolderOpen {
-            get {
-                object obj = ResourceManager.GetObject("FolderOpen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Remove {
-            get {
-                object obj = ResourceManager.GetObject("Remove", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         

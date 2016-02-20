@@ -1,4 +1,4 @@
-﻿using Library.Resources;
+﻿using Library.Resources.TextResources;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
