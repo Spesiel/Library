@@ -79,11 +79,29 @@ namespace Library.Resources.TextResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  / .
+        /// </summary>
+        public static string CountSeparator {
+            get {
+                return ResourceManager.GetString("CountSeparator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Library.
         /// </summary>
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to %.
+        /// </summary>
+        public static string PercentSign {
+            get {
+                return ResourceManager.GetString("PercentSign", resourceCulture);
             }
         }
         

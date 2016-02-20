@@ -67,6 +67,7 @@
     <Compile Include="CollapsibleInformation.Designer.cs">
       <DependentUpon>CollapsibleInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LanguageChoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="LayoutMainForm.Designer.cs">
       <DependentUpon>LayoutMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutWait.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutWait.Designer.cs">
+      <DependentUpon>LayoutWait.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
@@ -107,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutMainForm.resx">
       <DependentUpon>LayoutMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutWait.resx">
+      <DependentUpon>LayoutWait.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

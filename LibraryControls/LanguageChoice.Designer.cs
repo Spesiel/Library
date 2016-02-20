@@ -28,28 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanguageChoice));
             this.flow = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // flow
             // 
-            this.flow.AutoSize = true;
-            this.flow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flow.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.flow, "flow");
             this.flow.Name = "flow";
-            this.flow.Size = new System.Drawing.Size(284, 261);
-            this.flow.TabIndex = 0;
             // 
             // LanguageChoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.flow);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LanguageChoice";
-            this.Text = "LanguageChoice";
             this.ResumeLayout(false);
             this.PerformLayout();
 

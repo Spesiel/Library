@@ -19,7 +19,6 @@ namespace LibraryViewer
             menuStripFileLoad.Image = AssetsImage.FolderLoad;
 
             SetTexts();
-
             LanguageChoice.LanguageChanged += (s, e) => SetTexts();
         }
 

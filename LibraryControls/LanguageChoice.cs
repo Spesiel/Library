@@ -21,8 +21,8 @@ namespace Library.Controls
         public LanguageChoice()
         {
             InitializeComponent();
-            SetTexts();
 
+            SetTexts();
             LanguageChanged += (s, e) => SetTexts();
 
             foreach (PropertyInfo pi in typeof(AssetsCountry).GetProperties())

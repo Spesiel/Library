@@ -1,5 +1,4 @@
-﻿using Library.Resources;
-using Library.Resources.Objects;
+﻿using Library.Resources.Objects;
 using Library.Resources.TextResources;
 using Library.Works;
 using System.Collections.Generic;

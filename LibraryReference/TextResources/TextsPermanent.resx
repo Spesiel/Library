@@ -123,8 +123,15 @@
   <data name="Copyright" xml:space="preserve">
     <value>Copyright 2016</value>
   </data>
+  <data name="CountSeparator" xml:space="preserve">
+    <value> / </value>
+    <comment>SpaceSlashSpace</comment>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Library</value>
+  </data>
+  <data name="PercentSign" xml:space="preserve">
+    <value>%</value>
   </data>
   <data name="Space" xml:space="preserve">
     <value> </value>
