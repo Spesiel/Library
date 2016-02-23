@@ -193,7 +193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>100, 17</value>
@@ -238,30 +238,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="layout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="layout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 515</value>
-  </data>
-  <data name="layout.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;layout.Name" xml:space="preserve">
-    <value>layout</value>
-  </data>
-  <data name="&gt;&gt;layout.Type" xml:space="preserve">
-    <value>Library.Controls.LayoutMainForm, LibraryControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f6bc0749e9e48d</value>
-  </data>
-  <data name="&gt;&gt;layout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;layout.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

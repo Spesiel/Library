@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace LibraryViewer
+namespace Library.Viewer
 {
     internal static class Program
     {

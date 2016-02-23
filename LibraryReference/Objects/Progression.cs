@@ -7,6 +7,8 @@ namespace Library.Resources.Objects
     {
         #region Delegates + Events
 
+        public event EventHandler Changed = delegate { };
+
         public event EventHandler Completed = delegate { };
 
         #endregion Delegates + Events
@@ -22,6 +24,7 @@ namespace Library.Resources.Objects
             set
             {
                 _Current = value;
+                Changed(this, null);
                 if (Percentage >= 100) Completed(this, null);
             }
         }

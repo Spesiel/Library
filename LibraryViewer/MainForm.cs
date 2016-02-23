@@ -4,7 +4,7 @@ using Library.Resources.Objects;
 using Library.Resources.TextResources;
 using System.Windows.Forms;
 
-namespace LibraryViewer
+namespace Library.Viewer
 {
     public partial class MainForm : Form
     {
@@ -19,6 +19,17 @@ namespace LibraryViewer
         public MainForm()
         {
             InitializeComponent();
+
+            progression.Changed += (s, e) =>
+            {
+                if (!statusStripProgressLabel.Visible)
+                {
+                    statusStripProgressLabel.Visible = true;
+                    statusStripProgressBar.Visible = true;
+                }
+                statusStripProgressLabel.Text = progression.Progress;
+                statusStripProgressBar.Value = progression.Percentage;
+            };
 
             progression.Completed += (s, e) =>
             {
@@ -58,7 +69,7 @@ namespace LibraryViewer
 
         #endregion Constructors
 
-        #region Menu Help About
+        #region Menu Help
 
         private void aboutToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
@@ -68,10 +79,6 @@ namespace LibraryViewer
             }
         }
 
-        #endregion Menu Help About
-
-        #region Methods
-
         private void languageToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             using (LanguageChoice language = new LanguageChoice())
@@ -80,33 +87,6 @@ namespace LibraryViewer
             }
         }
 
-        #endregion Methods
-
-        #region Progress
-
-        public void UpdateCount(int value)
-        {
-            progression.Current = value;
-            UpdateProgressDisplay();
-        }
-
-        public void UpdateTotal(int value)
-        {
-            progression.Total = value;
-            UpdateProgressDisplay();
-        }
-
-        private void UpdateProgressDisplay()
-        {
-            if (!statusStripProgressLabel.Visible)
-            {
-                statusStripProgressLabel.Visible = true;
-                statusStripProgressBar.Visible = true;
-            }
-            statusStripProgressLabel.Text = progression.Progress;
-            statusStripProgressBar.Value = progression.Percentage;
-        }
-
-        #endregion Progress
+        #endregion Menu Help
     }
 }

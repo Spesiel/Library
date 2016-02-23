@@ -1,4 +1,4 @@
-﻿namespace LibraryViewer
+﻿namespace Library.Viewer
 {
     partial class MainForm
     {
@@ -40,7 +40,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.statusStripProgressLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.layout = new Library.Controls.LayoutMainForm();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -117,16 +116,10 @@
             this.statusStripProgressLabel.Name = "statusStripProgressLabel";
             resources.ApplyResources(this.statusStripProgressLabel, "statusStripProgressLabel");
             // 
-            // layout
-            // 
-            resources.ApplyResources(this.layout, "layout");
-            this.layout.Name = "layout";
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.layout);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.DoubleBuffered = true;
@@ -151,7 +144,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuStripFileLoad;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private Library.Controls.LayoutMainForm layout;
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripProgressBar statusStripProgressBar;
         private System.Windows.Forms.ToolStripStatusLabel statusStripProgressLabel;
