@@ -153,4 +153,7 @@
   <data name="PleaseWait" xml:space="preserve">
     <value>Please wait</value>
   </data>
+  <data name="StatusUpdate" xml:space="preserve">
+    <value>{0} new content, {1} missing content</value>
+  </data>
 </root>

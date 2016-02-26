@@ -208,12 +208,21 @@
     <value>False</value>
   </data>
   <data name="statusStripProgressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 17</value>
+    <value>135, 17</value>
   </data>
   <data name="statusStripProgressLabel.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
+    <value>statusStripProgressLabel</value>
   </data>
   <data name="statusStripProgressLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusStripUpdateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
+  </data>
+  <data name="statusStripUpdateLabel.Text" xml:space="preserve">
+    <value>statusStripUpdateLabel</value>
+  </data>
+  <data name="statusStripUpdateLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
@@ -310,6 +319,12 @@
     <value>statusStripProgressLabel</value>
   </data>
   <data name="&gt;&gt;statusStripProgressLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStripUpdateLabel.Name" xml:space="preserve">
+    <value>statusStripUpdateLabel</value>
+  </data>
+  <data name="&gt;&gt;statusStripUpdateLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

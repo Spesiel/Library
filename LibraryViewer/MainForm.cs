@@ -2,6 +2,10 @@
 using Library.Resources;
 using Library.Resources.Objects;
 using Library.Resources.TextResources;
+using Library.Works;
+using System;
+using System.ComponentModel;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Library.Viewer
@@ -69,9 +73,74 @@ namespace Library.Viewer
 
         #endregion Constructors
 
+        #region Menu File
+
+        private BackgroundWorker worker = new BackgroundWorker() { WorkerReportsProgress = true };
+
+        /// <summary>
+        /// Loads a directory as a new Library
+        /// </summary>
+        private void menuStripFileLoad_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog fbd = new FolderBrowserDialog())
+            {
+                if (DialogResult.OK.Equals(fbd.ShowDialog()))
+                {
+                    // Progress is reported as percentage by the worker.
+                    progression.Total = 100;
+                    worker.ProgressChanged += (s, ev) =>
+                    {
+                        progression.Current = ev.ProgressPercentage;
+                    };
+                    worker.RunWorkerCompleted += (s, ev) =>
+                    {
+                        progression.Current = 100;
+                        DisplayMain();
+                    };
+                    DisplayWait();
+
+                    //Loads the directory
+                    LibraryManager.LoadDirectory(worker, fbd.SelectedPath);
+                }
+            }
+
+            LibraryManager.Save();
+        }
+
+        /// <summary>
+        /// Open an existing Library. Loads a directory if there's no existing Library
+        /// </summary>
+        private void menuStripFileOpen_Click(object sender, EventArgs e)
+        {
+            // If there's no settings file, there's no existing Library. Create a new one
+            if (!File.Exists(Constants.SettingsFile))
+            {
+                menuStripFileLoad_Click(sender, e);
+            }
+
+            // A settings file exists. Load the Library
+            LibraryManager.Load();
+            int[] update = LibraryManager.CheckForUpdates();
+
+            // Display the update message for 3 minutes
+            statusStripUpdateLabel.Text = string.Format(Texts.StatusUpdate, update);
+            statusStripUpdateLabel.Visible = true;
+            Timer updateTimer = new Timer();
+            updateTimer.Interval = 3 * 60 * 1000; // 3 * 60s * 1000ms = 3min
+            updateTimer.Tick += (s, ev) => statusStripUpdateLabel.Visible = false;
+            updateTimer.Start();
+
+            LibraryManager.Save();
+        }
+
+        #endregion Menu File
+
         #region Menu Help
 
-        private void aboutToolStripMenuItem_Click(object sender, System.EventArgs e)
+        /// <summary>
+        /// Displays the About box
+        /// </summary>
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (About about = new About())
             {
@@ -79,11 +148,14 @@ namespace Library.Viewer
             }
         }
 
-        private void languageToolStripMenuItem_Click(object sender, System.EventArgs e)
+        /// <summary>
+        /// Displays the Choose your language box
+        /// </summary>
+        private void languageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (LanguageChoice language = new LanguageChoice())
             {
-                if (language.ShowDialog() == DialogResult.None) language.Hide();
+                if (language.ShowDialog() == DialogResult.OK) language.Hide();
             }
         }
 

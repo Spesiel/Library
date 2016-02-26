@@ -151,6 +151,15 @@ namespace Library.Resources.TextResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} new content, {1} missing content.
+        /// </summary>
+        public static string StatusUpdate {
+            get {
+                return ResourceManager.GetString("StatusUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tags.
         /// </summary>
         public static string Tags {

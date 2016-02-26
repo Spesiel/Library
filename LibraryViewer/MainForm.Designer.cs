@@ -40,6 +40,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.statusStripProgressLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStripUpdateLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             this.menuStripFileOpen.Name = "menuStripFileOpen";
             resources.ApplyResources(this.menuStripFileOpen, "menuStripFileOpen");
+            this.menuStripFileOpen.Click += new System.EventHandler(this.menuStripFileOpen_Click);
             // 
             // toolStripSeparator1
             // 
@@ -76,6 +78,7 @@
             // 
             this.menuStripFileLoad.Name = "menuStripFileLoad";
             resources.ApplyResources(this.menuStripFileLoad, "menuStripFileLoad");
+            this.menuStripFileLoad.Click += new System.EventHandler(this.menuStripFileLoad_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -101,7 +104,8 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusStripProgressBar,
-            this.statusStripProgressLabel});
+            this.statusStripProgressLabel,
+            this.statusStripUpdateLabel});
             resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -115,6 +119,11 @@
             // 
             this.statusStripProgressLabel.Name = "statusStripProgressLabel";
             resources.ApplyResources(this.statusStripProgressLabel, "statusStripProgressLabel");
+            // 
+            // statusStripUpdateLabel
+            // 
+            this.statusStripUpdateLabel.Name = "statusStripUpdateLabel";
+            resources.ApplyResources(this.statusStripUpdateLabel, "statusStripUpdateLabel");
             // 
             // MainForm
             // 
@@ -147,6 +156,7 @@
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripProgressBar statusStripProgressBar;
         private System.Windows.Forms.ToolStripStatusLabel statusStripProgressLabel;
+        private System.Windows.Forms.ToolStripStatusLabel statusStripUpdateLabel;
     }
 }
 
